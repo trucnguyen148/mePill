@@ -1,0 +1,65 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+
+    <ion-title>
+      <p>Th 3 22/12/2018 </p>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <h4>Liệu trình trong ngày</h4>
+    <ion-scroll scrollX="true" style="width:100%; height:300px">
+        <ion-row nowrap  >
+          <div *ngFor="let slide of slides">
+            <ion-card style="width: 180px; background-color: #faf9f9">
+              <ion-card-header>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col col-1>
+                      <ion-checkbox color="primary" checked="false"></ion-checkbox>
+                    </ion-col>
+                    <ion-col col-11 style="text-align: center;">
+                      <h1 [innerHTML]="slide.time"></h1>
+                      <p style="color: #0c63f0;"[innerHTML]="slide.description"></p>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-card-header>
+              <ion-card-content>
+                <img style="width: 80%; display: block; margin-left: auto; margin-right: auto;" [src]="slide.image" class="slide-image"/>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-row>
+      </ion-scroll>
+
+    <h4>Chi tiết liệu trình</h4>
+    <hr style="background-color: #0c63f0; height: 2px; border: 0;">
+    <ion-scroll scrollY="true"style="width:100%; height:100%" >
+      <div *ngFor="let slide of slides">
+        <h6 [innerHTML]="slide.name"></h6>
+        <p [innerHTML]="slide.number"></p>
+      </div>
+      <div *ngFor="let slide of slides">
+        <h6 [innerHTML]="slide.name1"></h6>
+        <p [innerHTML]="slide.number1"></p>
+      </div>
+      <div *ngFor="let slide of slides">
+        <h6 [innerHTML]="slide.name2"></h6>
+        <p [innerHTML]="slide.number2"></p>
+      </div>
+      <div *ngFor="let slide of slides">
+        <h6 [innerHTML]="slide.name3"></h6>
+        <p [innerHTML]="slide.number3"></p>
+      </div>
+    </ion-scroll>
+</ion-content>

@@ -1,0 +1,45 @@
+page-login {
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12%;
+    margin-bottom: 5%;
+  }
+
+
+  p{
+    text-align: center;
+  }
+
+  ion-item{
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  ion-col{
+    font-size: 12px;
+  }
+  p.or{
+    overflow: hidden;
+    text-align: center;
+  }
+  p.or:before,
+  p.or:after{
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+  }
+  p.or:before{
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  p.or:after{
+    left: 0.5em;
+    margin-right: -50%;
+  }
+}

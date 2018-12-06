@@ -30573,6 +30573,10 @@ page-login p.or:after {
   margin-right: -50%;
 }
 
+page-profile ion-input {
+  float: right;
+}
+
 page-signup img {
   display: block;
   margin-left: auto;

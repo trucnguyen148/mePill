@@ -1,0 +1,61 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Hồ sơ cá nhan</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <img style="width: 60%" src="../assets/imgs/signup.png">
+  <ion-list>
+    <ion-item>
+      <ion-label>Họ Và Tên</ion-label>
+      <ion-input text-right type="text" ></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Ngày sinh</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="m">Nam</ion-option>
+        <ion-option value="f">Nữ</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Số CMND</ion-label>
+      <ion-input text-right type="number" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Số điện thoại</ion-label>
+      <ion-input text-right type="number" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input text-right type="email" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Địa chỉ</ion-label>
+      <ion-input text-right type="text" ></ion-input>
+    </ion-item>
+
+
+  </ion-list>
+
+</ion-content>

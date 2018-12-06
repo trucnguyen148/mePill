@@ -9,24 +9,10 @@
   <img style="width: 60%" src="../assets/imgs/signup.png">
 
   <ion-list style="margin: 0 5%;">
-    <ion-item>
-      <ion-icon name="md-person" item-left primary></ion-icon>
-      <ion-input type="text" placeholder="Tên" ></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name="md-mail" item-left primary></ion-icon>
-      <ion-input type="email" placeholder="Email" ></ion-input>
-    </ion-item>
 
     <ion-item>
       <ion-icon name="md-call" item-left primary></ion-icon>
       <ion-input type="number" placeholder="Số điện thoại"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name="md-lock" item-left primary></ion-icon>
-      <ion-input type="password" placeholder="Mật khẩu"></ion-input>
     </ion-item>
 
   </ion-list>
@@ -41,13 +27,11 @@
     </ion-row>
   </ion-grid>
   <div >
-    <p style="margin-top: -3%;"><button ion-button round color="primary" (click)="goTabsPage()">ĐĂNG NHẬP</button></p>
+    <p style="margin-top: -3%;"><button ion-button round color="primary" (click)="goTabsPage()">ĐĂNG KÍ</button></p>
   </div>
-  <ion-grid>
-    <ion-row >
-      <ion-col col-7 style="text-align: right; font-size: 100%;"><p>Bạn đã có tài khoản?</p></ion-col>
-      <ion-col col-5 style="margin-top: -1%; margin-left: -10%; text-align: left;font-size: 105%;"><button ion-button clear (click)="goSignupPage()"><p>Đăng nhập</p></button> </ion-col>
-    </ion-row>
+  <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+      <p>Bạn đã có tài khoản?</p>
+      <button ion-button clear (click)="goLoginpPage()">Đăng nhập</button>
   </ion-grid>
 
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { PrivateProfilePage } from '../private-profile/private-profile';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -14,8 +14,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
+  privateprofilepage =  PrivateProfilePage;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  goPrivateProfilePage(){
+      this.navCtrl.setRoot(PrivateProfilePage);
   }
 
   ionViewDidLoad() {

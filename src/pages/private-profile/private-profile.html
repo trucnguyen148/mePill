@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Hồ sơ cá nhan</ion-title>
+    <ion-title>Hồ sơ Cá Nhân</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -18,7 +18,7 @@
   <ion-list>
     <ion-item>
       <ion-label>Họ Và Tên</ion-label>
-      <ion-input text-right type="text" ></ion-input>
+      <ion-input text-right type="text" *ngFor="let item of items">{{item.name}}</ion-input>
     </ion-item>
 
 

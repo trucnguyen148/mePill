@@ -232,11 +232,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var ProfilePage = /** @class */ (function () {
-    function ProfilePage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
+    function ProfilePage(nav) {
+        this.nav = nav;
         this.privateprofilepage = __WEBPACK_IMPORTED_MODULE_2__private_profile_private_profile__["a" /* PrivateProfilePage */];
+        this.items = [];
+        this.items = [
+            {
+                'name': 'Nguyen Thi Thanh Truc',
+                'phone': '0449214167',
+                'color': '#E63135'
+            },
+        ];
     }
+    ProfilePage.prototype.openNavDetailsPage = function (item) {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__private_profile_private_profile__["a" /* PrivateProfilePage */], { item: item });
+    };
     ProfilePage.prototype.goPrivateProfilePage = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__private_profile_private_profile__["a" /* PrivateProfilePage */]);
     };
@@ -245,11 +255,12 @@ var ProfilePage = /** @class */ (function () {
     };
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profile',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/profile/profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Hồ sơ cá C</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <img style="width: 60%" src="../assets/imgs/signup.png">\n  <h2><button ion-button round color="primary" (click)="goPrivateProfilePage()">ĐĂNG NHẬP</button></h2>\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/profile/profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/profile/profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Hồ sơ Cá Nhân</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <img style="width: 60%" src="../assets/imgs/signup.png">\n  <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>\n      <h2 style="text-align: center;"><b>{{ item.name }}</b></h2>\n    </button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/profile/profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object])
     ], ProfilePage);
     return ProfilePage;
+    var _a;
 }());
 
 //# sourceMappingURL=profile.js.map
@@ -291,7 +302,7 @@ var PrivateProfilePage = /** @class */ (function () {
     };
     PrivateProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-private-profile',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/private-profile/private-profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Hồ sơ cá nhan</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <img style="width: 60%" src="../assets/imgs/signup.png">\n  <ion-list>\n    <ion-item>\n      <ion-label>Họ Và Tên</ion-label>\n      <ion-input text-right type="text" ></ion-input>\n    </ion-item>\n\n\n    <ion-item>\n      <ion-label>Ngày sinh</ion-label>\n      <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Gender</ion-label>\n      <ion-select [(ngModel)]="gender">\n        <ion-option value="m">Nam</ion-option>\n        <ion-option value="f">Nữ</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Số CMND</ion-label>\n      <ion-input text-right type="number" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Số điện thoại</ion-label>\n      <ion-input text-right type="number" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Email</ion-label>\n      <ion-input text-right type="email" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Địa chỉ</ion-label>\n      <ion-input text-right type="text" ></ion-input>\n    </ion-item>\n\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/private-profile/private-profile.html"*/,
+            selector: 'page-private-profile',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/private-profile/private-profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Hồ sơ Cá Nhân</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <img style="width: 60%" src="../assets/imgs/signup.png">\n  <ion-list>\n    <ion-item>\n      <ion-label>Họ Và Tên</ion-label>\n      <ion-input text-right type="text" *ngFor="let item of items">{{item.name}}</ion-input>\n    </ion-item>\n\n\n    <ion-item>\n      <ion-label>Ngày sinh</ion-label>\n      <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Gender</ion-label>\n      <ion-select [(ngModel)]="gender">\n        <ion-option value="m">Nam</ion-option>\n        <ion-option value="f">Nữ</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Số CMND</ion-label>\n      <ion-input text-right type="number" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Số điện thoại</ion-label>\n      <ion-input text-right type="number" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Email</ion-label>\n      <ion-input text-right type="email" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Địa chỉ</ion-label>\n      <ion-input text-right type="text" ></ion-input>\n    </ion-item>\n\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/private-profile/private-profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
     ], PrivateProfilePage);

@@ -30573,8 +30573,20 @@ page-login p.or:after {
   margin-right: -50%;
 }
 
-page-profile ion-input {
-  float: right;
+page-private-profile img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12%;
+  margin-bottom: 5%;
+}
+
+page-profile img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12%;
+  margin-bottom: 5%;
 }
 
 page-signup img {

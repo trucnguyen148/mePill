@@ -12,12 +12,26 @@ import { PrivateProfilePage } from '../private-profile/private-profile';
 @Component({
   selector: 'page-profile',
   templateUrl: 'profile.html',
+
 })
 export class ProfilePage {
   privateprofilepage =  PrivateProfilePage;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  items = [];
+
+  constructor(public nav: NavController) {
+    this.items = [
+      {
+        'name': 'Nguyen Thi Thanh Truc',
+        'phone': '0449214167',
+        'color': '#E63135'
+      },
+    ]
+  }
+
+  openNavDetailsPage(item) {
+    this.nav.push(PrivateProfilePage, { item: item });
   }
 
   goPrivateProfilePage(){
@@ -27,5 +41,7 @@ export class ProfilePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }
+
+
 
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { ProfilePage } from '../profile/profile';
 /**
  * Generated class for the PrivateProfilePage page.
  *
@@ -15,9 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PrivateProfilePage {
   gender: string = "m";
-  day: string;
-  month: string;
-  year: number;
+  item;
+
+  constructor(params: NavParams) {
+    this.item = params.data.item;
+  }
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

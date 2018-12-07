@@ -30581,7 +30581,7 @@ page-private-profile img {
   margin-bottom: 5%;
 }
 
-page-profile img {
+page-profile .avatar {
   display: block;
   margin-left: auto;
   margin-right: auto;

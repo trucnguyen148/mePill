@@ -12,6 +12,7 @@ import { ChattingPage } from '../pages/chatting/chatting';
 import { CalenderPage } from '../pages/calender/calender';
 import { ProfilePage } from '../pages/profile/profile';
 import { PrivateProfilePage } from '../pages/private-profile/private-profile';
+import { OrderHistoriesPage } from '../pages/order-histories/order-histories';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -29,6 +30,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CalenderPage,
     ProfilePage,
     PrivateProfilePage,
+    OrderHistoriesPage,
     TabsPage
   ],
   imports: [
@@ -47,6 +49,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CalenderPage,
     ProfilePage,
     PrivateProfilePage,
+    OrderHistoriesPage,
     TabsPage
   ],
   providers: [

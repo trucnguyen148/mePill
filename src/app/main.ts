@@ -14,7 +14,7 @@ import { NavController, NavParams } from 'ionic-angular';
 export class PrivateProfilePage {
   item;
 
-  constructor(params: NavParams) {
-    this.item = params.data.item;
+  constructor(navParams: NavParams) {
+    this.item = navParams.data.item;
   }
 }

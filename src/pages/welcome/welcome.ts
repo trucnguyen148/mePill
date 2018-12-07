@@ -52,7 +52,7 @@ export class WelcomePage {
 
     loginPage: LoginPage;
 
-    constructor(public navCtrl: NavController) {}
+    constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
     goLoginPage() {
         this.navCtrl.setRoot(LoginPage);

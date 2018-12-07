@@ -16,7 +16,19 @@
 <ion-content padding>
   <img style="width: 60%" src="../assets/imgs/signup.png">
   <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>
-      <h2 style="text-align: center;"><b>{{ item.name }}</b></h2>
-    </button>
+    <h2 style="text-align: center;"><b>{{ item.name }}</b></h2>
+  </button>
+
+  <ion-grid style="display:flex; justify-content: center;align-items: center; flex-direction: row;">
+      <img src="../assets/imgs/orderNumber.png">hdjfkdh
+      <button ion-button clear (click)="goOrderHistoriesPage()">hdjfkdh</button>
+  </ion-grid>
+
+  <ion-grid style="display:flex; justify-content: center; align-items: center; flex-direction: row;">
+    <button><img src="../assets/imgs/waitingforConfirm.png">hdjfkdh</button>
+    <button><img src="../assets/imgs/waitingforPills.png">hdjfkdh</button>
+    <button><img src="../assets/imgs/deliverPills.png">hdjfkdh</button>
+    <button><img src="../assets/imgs/delivered.png">hdjfkdh</button>
+  </ion-grid>
 
 </ion-content>

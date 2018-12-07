@@ -19,7 +19,7 @@ export class SignupPage {
   tabsPage: TabsPage;
   loginPage: LoginPage;
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   goTabsPage(){
       this.navCtrl.setRoot(TabsPage);

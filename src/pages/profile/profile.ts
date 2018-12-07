@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PrivateProfilePage } from '../private-profile/private-profile';
+import { OrderHistoriesPage } from '../order-histories/order-histories';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -15,12 +16,13 @@ import { PrivateProfilePage } from '../private-profile/private-profile';
 
 })
 export class ProfilePage {
-  privateprofilepage =  PrivateProfilePage;
+  privateprofilePage =  PrivateProfilePage;
+  orderhistoriesPage = OrderHistoriesPage;
 
 
   items = [];
 
-  constructor(public nav: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items = [
       {
         'name': 'Nguyen Thi Thanh Truc',
@@ -31,11 +33,15 @@ export class ProfilePage {
   }
 
   openNavDetailsPage(item) {
-    this.nav.push(PrivateProfilePage, { item: item });
+    this.navCtrl.push(PrivateProfilePage, { item: item });
   }
 
   goPrivateProfilePage(){
       this.navCtrl.setRoot(PrivateProfilePage);
+  }
+
+  goOrderHistoriesPage(){
+      this.navCtrl.setRoot(OrderHistoriesPage);
   }
 
   ionViewDidLoad() {

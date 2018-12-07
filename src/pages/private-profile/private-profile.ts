@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ProfilePage } from '../profile/profile';
 /**
  * Generated class for the PrivateProfilePage page.
  *
@@ -17,12 +16,10 @@ export class PrivateProfilePage {
   gender: string = "m";
   item;
 
-  constructor(params: NavParams) {
-    this.item = params.data.item;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.item = navParams.data.item;
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PrivateProfilePage');

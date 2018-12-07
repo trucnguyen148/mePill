@@ -16,7 +16,7 @@ export class PrivateProfilePage {
   gender: string = "m";
   item;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor( public navParams: NavParams) {
     this.item = navParams.data.item;
   }
 

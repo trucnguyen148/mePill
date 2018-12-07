@@ -22,7 +22,7 @@ export class ProfilePage {
 
   items = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
     this.items = [
       {
         'name': 'Nguyen Thi Thanh Truc',

@@ -17,9 +17,10 @@ import { ProfilePage } from '../profile/profile';
 export class OrderHistoriesPage {
   profilePage = ProfilePage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
 
   }
+
   goProfilePage(){
       this.navCtrl.setRoot(ProfilePage);
   }

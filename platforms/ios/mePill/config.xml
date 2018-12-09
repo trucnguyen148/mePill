@@ -38,6 +38,9 @@
     <feature name="Keyboard">
         <param name="ios-package" onload="true" value="CDVIonicKeyboard" />
     </feature>
+    <feature name="Calendar">
+        <param name="ios-package" value="Calendar" />
+    </feature>
     <name>mePill</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -50,7 +53,7 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-navigation href="http://192.168.1.112:8101" sessionid="249e8f2d" />
-    <allow-navigation href="http://192.168.1.112:8100" sessionid="1ab52131" />
+    <allow-navigation href="http://192.168.1.112:8100" sessionid="67a9a355" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />

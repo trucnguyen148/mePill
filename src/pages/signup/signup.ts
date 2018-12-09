@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
+import { VerifyPage } from '../verify/verify';
 import { LoginPage } from '../login/login'
 
 /**
@@ -16,13 +16,13 @@ import { LoginPage } from '../login/login'
   templateUrl: 'signup.html',
 })
 export class SignupPage {
-  tabsPage: TabsPage;
+  verigyPage: VerifyPage;
   loginPage: LoginPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  goTabsPage(){
-      this.navCtrl.setRoot(TabsPage);
+  goVerifyPage(){
+      this.navCtrl.setRoot(VerifyPage);
   }
 
   goLoginpPage(){

@@ -6,10 +6,11 @@ import { MyApp } from './app.component';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { VerifyPage } from '../pages/verify/verify';
 import { HomePage } from '../pages/home/home';
 import { TreatmentPage } from '../pages/treatment/treatment';
 import { ChattingPage } from '../pages/chatting/chatting';
-import { CalenderPage } from '../pages/calender/calender';
+import { CalendarPage } from '../pages/calendar/calendar';
 import { ProfilePage } from '../pages/profile/profile';
 import { PrivateProfilePage } from '../pages/private-profile/private-profile';
 import { OrderHistoriesPage } from '../pages/order-histories/order-histories';
@@ -17,6 +18,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CalendarModule } from 'ionic3-calendar-en';
 
 @NgModule({
   declarations: [
@@ -24,10 +26,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     WelcomePage,
     LoginPage,
     SignupPage,
+    VerifyPage,
     HomePage,
     TreatmentPage,
     ChattingPage,
-    CalenderPage,
+    CalendarPage,
     ProfilePage,
     PrivateProfilePage,
     OrderHistoriesPage,
@@ -35,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -43,10 +47,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     WelcomePage,
     LoginPage,
     SignupPage,
+    VerifyPage,
     HomePage,
     TreatmentPage,
     ChattingPage,
-    CalenderPage,
+    CalendarPage,
     ProfilePage,
     PrivateProfilePage,
     OrderHistoriesPage,

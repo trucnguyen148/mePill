@@ -39,6 +39,9 @@
 		DA3D1E1B17CB444290DD6E18 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BF0B51F7E944EA81A50D49 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4131C2D4EDBD42F790D6C69F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A81AB86417154B18B66DF419 /* libz.tbd */; };
 		7B1C7023C900468496029D4C /* CDVIonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 33856448B5C74BBBBC96CDC8 /* CDVIonicKeyboard.m */; };
+		3F9A5D0875DC45C4A44C6725 /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5100534E940040F39D571B91 /* Calendar.m */; };
+		BA638992B585418DAB555B50 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C54CA192A14259BAEF9F99 /* EventKit.framework */; };
+		7AE65C35198743549E297DC1 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756F163713634ADFBFD8F4A2 /* EventKitUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +128,10 @@
 		A81AB86417154B18B66DF419 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 		33856448B5C74BBBBC96CDC8 /* CDVIonicKeyboard.m */ = {isa = PBXFileReference; name = "CDVIonicKeyboard.m"; path = "cordova-plugin-ionic-keyboard/CDVIonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		425498FDA04849AA8102D5B5 /* CDVIonicKeyboard.h */ = {isa = PBXFileReference; name = "CDVIonicKeyboard.h"; path = "cordova-plugin-ionic-keyboard/CDVIonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		5100534E940040F39D571B91 /* Calendar.m */ = {isa = PBXFileReference; name = "Calendar.m"; path = "cordova-plugin-calendar/Calendar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		270C32E2D69448D497096898 /* Calendar.h */ = {isa = PBXFileReference; name = "Calendar.h"; path = "cordova-plugin-calendar/Calendar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		64C54CA192A14259BAEF9F99 /* EventKit.framework */ = {isa = PBXFileReference; name = "EventKit.framework"; path = "System/Library/Frameworks/EventKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		756F163713634ADFBFD8F4A2 /* EventKitUI.framework */ = {isa = PBXFileReference; name = "EventKitUI.framework"; path = "System/Library/Frameworks/EventKitUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +142,8 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				DA3D1E1B17CB444290DD6E18 /* WebKit.framework in Frameworks */,
 				4131C2D4EDBD42F790D6C69F /* libz.tbd in Frameworks */,
+				BA638992B585418DAB555B50 /* EventKit.framework in Frameworks */,
+				7AE65C35198743549E297DC1 /* EventKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +216,8 @@
 			children = (
 				81BF0B51F7E944EA81A50D49 /* WebKit.framework */,
 				A81AB86417154B18B66DF419 /* libz.tbd */,
+				64C54CA192A14259BAEF9F99 /* EventKit.framework */,
+				756F163713634ADFBFD8F4A2 /* EventKitUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -276,6 +287,8 @@
 				7CE09F2C901E4027A1F8E30D /* GCDWebServerStreamedResponse.h */,
 				33856448B5C74BBBBC96CDC8 /* CDVIonicKeyboard.m */,
 				425498FDA04849AA8102D5B5 /* CDVIonicKeyboard.h */,
+				5100534E940040F39D571B91 /* Calendar.m */,
+				270C32E2D69448D497096898 /* Calendar.h */,
 			);
 			name = Plugins;
 			path = "mePill/Plugins";
@@ -409,6 +422,7 @@
 				8D90E139F3F141A495702A3A /* GCDWebServerFileResponse.m in Sources */,
 				3AF75680CA9C4441AF20C4B0 /* GCDWebServerStreamedResponse.m in Sources */,
 				7B1C7023C900468496029D4C /* CDVIonicKeyboard.m in Sources */,
+				3F9A5D0875DC45C4A44C6725 /* Calendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

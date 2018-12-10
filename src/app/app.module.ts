@@ -9,6 +9,8 @@ import { SignupPage } from '../pages/signup/signup';
 import { VerifyPage } from '../pages/verify/verify';
 import { HomePage } from '../pages/home/home';
 import { TreatmentPage } from '../pages/treatment/treatment';
+import { AddItemPage } from '../pages/add-item/add-item';
+import { ItemDetailPage } from '../pages/item-detail/item-detail';
 import { ChattingPage } from '../pages/chatting/chatting';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { ProfilePage } from '../pages/profile/profile';
@@ -19,6 +21,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CalendarModule } from 'ionic3-calendar-en';
+import { SelectSearchableModule } from 'ionic-select-searchable';
+import { IonicPageModule } from 'ionic-angular';
+
+
 
 @NgModule({
   declarations: [
@@ -29,6 +35,8 @@ import { CalendarModule } from 'ionic3-calendar-en';
     VerifyPage,
     HomePage,
     TreatmentPage,
+    AddItemPage,
+    ItemDetailPage,
     ChattingPage,
     CalendarPage,
     ProfilePage,
@@ -39,7 +47,9 @@ import { CalendarModule } from 'ionic3-calendar-en';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    CalendarModule
+    CalendarModule,
+    IonicPageModule.forChild(AddItemPage),
+    SelectSearchableModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -50,6 +60,8 @@ import { CalendarModule } from 'ionic3-calendar-en';
     VerifyPage,
     HomePage,
     TreatmentPage,
+    AddItemPage,
+    ItemDetailPage,
     ChattingPage,
     CalendarPage,
     ProfilePage,

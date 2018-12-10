@@ -60,6 +60,8 @@ export class AddItemPage {
     ];
   }
 
+  
+
   getItems(ev) {
     // Reset items back to all of the items
     this.initializeItems();

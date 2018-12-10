@@ -48,7 +48,7 @@ export class TreatmentPage {
 
   viewItem(item){
     this.navCtrl.push(ItemDetailPage, {
-      item: item
+      item: item,
     });
   }
 

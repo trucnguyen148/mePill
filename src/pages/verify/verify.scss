@@ -1,6 +1,10 @@
 page-verify {
-  form {
-      display: table-cell;
-      vertical-align: middle;
-    }
+  .vertical-align-content > *
+{
+     display: flex!important;
+     align-content: center!important;
+     align-items: center!important;
+     justify-content: center;
+  
+}
 }

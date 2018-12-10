@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ModalController, NavController } from 'ionic-angular';
 import { AddItemPage } from '../add-item/add-item';
 import { ItemDetailPage } from '../item-detail/item-detail';
+
 /**
  * Generated class for the TreatmentPage page.
  *

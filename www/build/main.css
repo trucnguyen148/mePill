@@ -30855,10 +30855,6 @@ page-verify .vertical-align-content > * {
   justify-content: center;
 }
 
-page-verify button {
-  margin-bottom: 15%;
-}
-
 page-welcome .tutorial-page .toolbar-background {
   background: #fff;
   border-color: transparent;

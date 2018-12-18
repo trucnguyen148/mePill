@@ -15,10 +15,13 @@
 <ion-content padding>
   <ion-grid  style="display: flex; align-items: center; flex-direction: row;">
     <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>
-    <h6>Liệu trình bổ sung</h6>
+
+    <h6 style="margin-top: 1rem; padding-left: 1rem;">Thêm liệu trình</h6>
   </ion-grid>
 
-  <ion-list>
+<hr>
+  <h6>Liệu trình bổ sung</h6>
+  <ion-list class="treatment-list">
     <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item.title}}</ion-item>
   </ion-list>
 </ion-content>

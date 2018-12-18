@@ -30782,7 +30782,7 @@ ion-calendar .calendar-row .select {
   background: #46b592;
 }
 
-page-login img {
+.image {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -30829,37 +30829,30 @@ page-login p.or:after {
   margin-right: -50%;
 }
 
-page-private-profile img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 12%;
-  margin-bottom: 5%;
-}
-
-page-profile .avatar {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 12%;
-  margin-bottom: 5%;
-}
-
-page-signup img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 12%;
-  margin-bottom: 5%;
-}
-
 page-signup p {
   text-align: center;
 }
 
-page-verify form {
-  display: table-cell;
-  vertical-align: middle;
+page-verify h3 {
+  margin-bottom: 15%;
+}
+
+page-verify .vertical-align-content > * {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-align-content: center !important;
+  -ms-flex-line-pack: center !important;
+  align-content: center !important;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 page-welcome .tutorial-page .toolbar-background {

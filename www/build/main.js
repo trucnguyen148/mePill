@@ -4,51 +4,6 @@ webpackJsonp([13],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the CalendarPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var CalendarPage = /** @class */ (function () {
-    function CalendarPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    CalendarPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CalendarPage');
-    };
-    CalendarPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-calendar',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/calendar/calendar.html"*/'<!--\n  Generated template for the CalendarPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>calendar</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-calendar #calendar></ion-calendar>\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/calendar/calendar.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], CalendarPage);
-    return CalendarPage;
-}());
-
-//# sourceMappingURL=calendar.js.map
-
-/***/ }),
-
-/***/ 104:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddItemPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
@@ -126,7 +81,7 @@ var AddItemPage = /** @class */ (function () {
     };
     AddItemPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-add-item',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/add-item/add-item.html"*/'<!--\n  Generated template for the AddItemPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Add Item\n    </ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>\n      </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <form (submit)="doSubmit($event)" [formGroup]="langForm">\n  <ion-list radio-group formControlName="langs" [(ngModel)]="title">\n    <ion-item *ngFor="let item of items">\n      <ion-label>{{item.title }}</ion-label>\n      <ion-radio value="{{item.title}}"  checked="false" ></ion-radio>\n    </ion-item>\n  </ion-list>\n  <button ion-button color="primary" (click)="saveItem()">Save</button>\n  </form>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/add-item/add-item.html"*/,
+            selector: 'page-add-item',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/add-item/add-item.html"*/'<!--\n  Generated template for the AddItemPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Add Item\n    </ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>\n      </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <form (submit)="doSubmit($event)" [formGroup]="langForm" style="text-align: center">\n  <ion-list radio-group formControlName="langs" [(ngModel)]="title">\n    <ion-item *ngFor="let item of items">\n      <ion-label>{{item.title }}</ion-label>\n      <ion-radio value="{{item.title}}"  checked="false" ></ion-radio>\n    </ion-item>\n  </ion-list>\n  <button ion-button color="primary" (click)="saveItem()">Save</button>\n  </form>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/add-item/add-item.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"]])
     ], AddItemPage);
@@ -134,6 +89,51 @@ var AddItemPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=add-item.js.map
+
+/***/ }),
+
+/***/ 104:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the CalendarPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CalendarPage = /** @class */ (function () {
+    function CalendarPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    CalendarPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CalendarPage');
+    };
+    CalendarPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-calendar',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/calendar/calendar.html"*/'<!--\n  Generated template for the CalendarPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>calendar</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-calendar #calendar></ion-calendar>\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/calendar/calendar.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
+    ], CalendarPage);
+    return CalendarPage;
+}());
+
+//# sourceMappingURL=calendar.js.map
 
 /***/ }),
 
@@ -286,7 +286,7 @@ var ItemDetailPage = /** @class */ (function () {
     };
     ItemDetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-item-detail',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/item-detail/item-detail.html"*/'<!--\n  Generated template for the ItemDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="secondary">\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-card>\n    <ion-card-content>\n      {{description}}\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/item-detail/item-detail.html"*/,
+            selector: 'page-item-detail',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/item-detail/item-detail.html"*/'<!--\n  Generated template for the ItemDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-card>\n    <ion-card-content>\n      {{description}}\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/item-detail/item-detail.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
     ], ItemDetailPage);
@@ -304,7 +304,7 @@ var ItemDetailPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TreatmentPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_item_add_item__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_item_add_item__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__item_detail_item_detail__ = __webpack_require__(107);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -348,17 +348,16 @@ var TreatmentPage = /** @class */ (function () {
     };
     TreatmentPage.prototype.viewItem = function (item) {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__item_detail_item_detail__["a" /* ItemDetailPage */], {
-            item: item
+            item: item,
         });
     };
     TreatmentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-treatment',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/treatment/treatment.html"*/'<!--\n  Generated template for the TreatmentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<<ion-header>\n  <ion-navbar>\n    <ion-title>\n    Quản lý thuốc\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-grid  style="display: flex; align-items: center; flex-direction: row;">\n    <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>\n    <h6>Thêm liệu trình</h6>\n  </ion-grid>\n\n<hr>\n  <h6>Liệu trình bổ sung</h6>\n  <ion-list>\n    <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item.title}}</ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/treatment/treatment.html"*/,
+            selector: 'page-treatment',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/treatment/treatment.html"*/'<!--\n  Generated template for the TreatmentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<<ion-header>\n  <ion-navbar>\n    <ion-title>\n    Quản lý thuốc\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-grid  style="display: flex; align-items: center; flex-direction: row;">\n    <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>\n    <h6>Liệu trình bổ sung</h6>\n  </ion-grid>\n\n  <ion-list>\n    <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item.title}} {{item.description}}</ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/treatment/treatment.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"]])
     ], TreatmentPage);
     return TreatmentPage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=treatment.js.map
@@ -400,7 +399,7 @@ var PrivateProfilePage = /** @class */ (function () {
     };
     PrivateProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-private-profile',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/private-profile/private-profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Hồ sơ  flex-wrapá Nhân</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <img style="width: 60%" src="../assets/imgs/signup.png">\n  <ion-list>\n    <ion-item>\n      <ion-label>Họ Và Tên</ion-label>\n      <ion-input text-right type="text" *ngFor="let item of items">{{item.name}}</ion-input>\n    </ion-item>\n\n\n    <ion-item>\n      <ion-label>Ngày sinh</ion-label>\n      <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Gender</ion-label>\n      <ion-select [(ngModel)]="gender">\n        <ion-option value="m">Nam</ion-option>\n        <ion-option value="f">Nữ</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Số CMND</ion-label>\n      <ion-input text-right type="number"  style="flex-wrap: wrap;"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Số điện thoại</ion-label>\n      <ion-input text-right type="number" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Email</ion-label>\n      <ion-input text-right type="email" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Địa chỉ</ion-label>\n      <ion-input text-right type="text" ></ion-input>\n    </ion-item>\n\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/private-profile/private-profile.html"*/,
+            selector: 'page-private-profile',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/private-profile/private-profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Hồ sơ Nhân</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <img class="image" style="width: 60%" src="../assets/imgs/signup.png">\n  <ion-list>\n    <ion-item>\n      <ion-label>Họ Và Tên</ion-label>\n      <ion-input text-right type="text" *ngFor="let item of items">{{item.name}}</ion-input>\n    </ion-item>\n\n\n    <ion-item>\n      <ion-label>Ngày sinh</ion-label>\n      <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Gender</ion-label>\n      <ion-select [(ngModel)]="gender">\n        <ion-option value="m">Nam</ion-option>\n        <ion-option value="f">Nữ</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Số CMND</ion-label>\n      <ion-input text-right type="number"  style="flex-wrap: wrap;"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Số điện thoại</ion-label>\n      <ion-input text-right type="number" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Email</ion-label>\n      <ion-input text-right type="email" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Địa chỉ</ion-label>\n      <ion-input text-right type="text" ></ion-input>\n    </ion-item>\n\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/private-profile/private-profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
     ], PrivateProfilePage);
@@ -502,7 +501,7 @@ var SignupPage = /** @class */ (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-signup',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content>\n  <img style="width: 60%" src="../assets/imgs/signup.png">\n\n  <ion-list style="margin: 0 5%;">\n\n    <ion-item>\n      <ion-input type="number" placeholder="Nhập số điện thoại" text-center></ion-input>\n    </ion-item>\n\n  </ion-list>\n  <ion-grid>\n    <ion-row>\n      <ion-col col-1 style="margin: 0 0 0 5%;">\n        <p style="text-align: right;"><ion-checkbox color="dark" checked="false"></ion-checkbox></p>\n      </ion-col>\n      <ion-col col-10>\n        <p style="text-align: left;">Tôi đồng ý với các điều khoản và điều kiện</p>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <div >\n    <p style="margin-top: -3%;"><button ion-button round color="primary" (click)="goVerifyPage()">ĐĂNG KÍ</button></p>\n  </div>\n  <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">\n      <p>Bạn đã có tài khoản?</p>\n      <button ion-button clear (click)="goLoginpPage()">Đăng nhập</button>\n  </ion-grid>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/signup/signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content>\n  <img class="image" style="width: 60%" src="../assets/imgs/signup.png">\n\n  <ion-list style="margin: 0 5%;">\n\n    <ion-item>\n      <ion-input type="number" placeholder="Nhập số điện thoại" text-center></ion-input>\n    </ion-item>\n\n  </ion-list>\n  <ion-grid>\n    <ion-row>\n      <ion-col col-1 style="margin: 0 0 0 5%;">\n        <p style="text-align: right;"><ion-checkbox color="dark" checked="false"></ion-checkbox></p>\n      </ion-col>\n      <ion-col col-10>\n        <p style="text-align: left;">Tôi đồng ý với các điều khoản và điều kiện</p>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <div >\n    <p style="margin-top: -3%;"><button ion-button round color="primary" (click)="goVerifyPage()">ĐĂNG KÍ</button></p>\n  </div>\n  <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">\n      <p>Bạn đã có tài khoản?</p>\n      <button ion-button clear (click)="goLoginpPage()">Đăng nhập</button>\n  </ion-grid>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/signup/signup.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
     ], SignupPage);
@@ -547,7 +546,7 @@ var VerifyPage = /** @class */ (function () {
     };
     VerifyPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-verify',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/verify/verify.html"*/'<!--\n  Generated template for the VerifyPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content center text-center padding>\n  <form>\n    <h4 >Nhập mã xác nhận</h4>\n    <p>Chúng tôi đã gửi mã xác nhận đến số điện thoại:<br><b>090 xxx xxxx</b></p>\n\n    <ion-input text-center type=”number” placeholder="Mã xác nhận" ></ion-input>\n    <button ion-button round color="primary" >Verify</button>\n    <div text-left >\n      <p>Bạn ko nhận được mã xác nhận? </p>\n      <ion-grid style="display: flex; justify-content: left; align-items: center; flex-direction: row;">\n          <p>Chờ một vài phút và </p>\n          <a href="www.google.com"> gửi lại</a>\n      </ion-grid>\n    </div>\n\n\n  </form>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/verify/verify.html"*/,
+            selector: 'page-verify',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/verify/verify.html"*/'<!--\n  Generated template for the VerifyPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content text-center padding class="vertical-align-content">\n  <form>\n    <h3>Nhập mã xác nhận</h3>\n    <p>Chúng tôi đã gửi mã xác nhận đến số điện thoại:<br><b>090 xxx xxxx</b></p>\n\n    <ion-input text-center type=”number” placeholder="Mã xác nhận" ></ion-input>\n    <button block ion-button round color="primary" >Xác nhận</button>\n    <button block ion-button round color="primary" >Gửi lại mã xác nhận</button>\n\n\n  </form>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/verify/verify.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
     ], VerifyPage);
@@ -659,11 +658,11 @@ webpackEmptyAsyncContext.id = 122;
 
 var map = {
 	"../pages/add-item/add-item.module": [
-		414,
+		413,
 		12
 	],
 	"../pages/calendar/calendar.module": [
-		413,
+		414,
 		11
 	],
 	"../pages/chatting/chatting.module": [
@@ -687,7 +686,7 @@ var map = {
 		6
 	],
 	"../pages/private-profile/private-profile.module": [
-		422,
+		420,
 		5
 	],
 	"../pages/profile/profile.module": [
@@ -695,7 +694,7 @@ var map = {
 		4
 	],
 	"../pages/signup/signup.module": [
-		420,
+		422,
 		3
 	],
 	"../pages/treatment/treatment.module": [
@@ -736,7 +735,7 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__treatment_treatment__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chatting_chatting__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__calendar_calendar__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__calendar_calendar__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_profile__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -829,10 +828,10 @@ var PrivateProfilePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_verify_verify__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_treatment_treatment__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_add_item_add_item__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_add_item_add_item__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_item_detail_item_detail__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_chatting_chatting__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_calendar_calendar__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_calendar_calendar__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_profile_profile__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_private_profile_private_profile__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_order_histories_order_histories__ = __webpack_require__(110);
@@ -897,16 +896,16 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicModule"].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/calendar/calendar.module#CalendarPageModule', name: 'CalendarPage', segment: 'calendar', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-item/add-item.module#AddItemPageModule', name: 'AddItemPage', segment: 'add-item', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/calendar/calendar.module#CalendarPageModule', name: 'CalendarPage', segment: 'calendar', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/chatting/chatting.module#ChattingPageModule', name: 'ChattingPage', segment: 'chatting', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/order-histories/order-histories.module#OrderHistoriesPageModule', name: 'OrderHistoriesPage', segment: 'order-histories', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/private-profile/private-profile.module#PrivateProfilePageModule', name: 'PrivateProfilePage', segment: 'private-profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/treatment/treatment.module#TreatmentPageModule', name: 'TreatmentPage', segment: 'treatment', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/verify/verify.module#VerifyPageModule', name: 'VerifyPage', segment: 'verify', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
@@ -1303,7 +1302,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content>\n  <img style="width: 60%" src="../assets/imgs/signup.png">\n\n  <ion-list style="margin: 0 5%;">\n    <ion-item>\n      <ion-icon name="md-person" item-left primary></ion-icon>\n      <ion-input type="text" placeholder="Số điện thoại/ Email" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-icon name="md-lock" item-left primary></ion-icon>\n      <ion-input type="password" placeholder="Mật khẩu"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <p style="text-align: right; margin-right: 5%;">Quên mật khẩu?</p>\n\n  <div >\n    <p><button ion-button round color="primary" (click)="goTabsPage()">ĐĂNG NHẬP</button></p>\n    <p class="or">Hoặc đăng nhập với</p>\n    <ion-grid>\n      <ion-row>\n        <ion-col col-6>\n          <button ion-button block round color="facebook">Facebook</button>\n        </ion-col>\n        <ion-col col-6>\n          <button ion-button block round color="gmail">Gmail</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n  </div>\n  <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">\n      <p>Bạn chưa có tài khoản?</p>\n      <button ion-button clear (click)="goSignupPage()">Đăng kí</button>\n  </ion-grid>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content>\n  <img class="image" style="width: 60%" src="../assets/imgs/signup.png">\n\n  <ion-list style="margin: 0 5%;">\n    <ion-item>\n      <ion-icon name="md-person" item-left primary></ion-icon>\n      <ion-input type="text" placeholder="Số điện thoại/ Email" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-icon name="md-lock" item-left primary></ion-icon>\n      <ion-input type="password" placeholder="Mật khẩu"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <p style="text-align: right; margin-right: 5%;">Quên mật khẩu?</p>\n\n  <div >\n    <p><button ion-button round color="primary" (click)="goTabsPage()">ĐĂNG NHẬP</button></p>\n    <p class="or">Hoặc đăng nhập với</p>\n    <ion-grid>\n      <ion-row>\n        <ion-col col-6>\n          <button ion-button block round color="facebook">Facebook</button>\n        </ion-col>\n        <ion-col col-6>\n          <button ion-button block round color="gmail">Gmail</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n  </div>\n  <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">\n      <p>Bạn chưa có tài khoản?</p>\n      <button ion-button clear (click)="goSignupPage()">Đăng kí</button>\n  </ion-grid>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"]])
     ], LoginPage);
@@ -1370,7 +1369,7 @@ var ProfilePage = /** @class */ (function () {
     };
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-profile',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/profile/profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Hồ sơ Cá Nhân</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <img class="avatar" style="width: 40%" src="../assets/imgs/signup.png">\n  <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>\n    <h2 style="text-align: center;"><b>{{ item.name }}</b></h2>\n  </button>\n\n  <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">\n      <ion-col col-6><img class="avatar" style="width: 30%;" src="../assets/imgs/orderNumber.png">Đơn mua hang: XRNW</ion-col>\n      <ion-col col-6 style="font-size: 40%;"><button ion-button clear (click)="goOrderHistoriesPage()">Xem lịch sử giao hàng</button></ion-col>\n\n  </ion-grid>\n\n  <ion-grid style="display:flex; justify-content: center; align-items: center; flex-direction: row;">\n    <button><img src="../assets/imgs/waitingforConfirm.png">Chờ xác nhận</button>\n    <button><img src="../assets/imgs/waitingforPills.png">Chờ lấy thuốc</button>\n    <button><img src="../assets/imgs/deliverPills.png">Đang giao thuốc</button>\n    <button><img src="../assets/imgs/delivered.png">Hoàn tất</button>\n  </ion-grid>\n<hr>\n  <ion-grid style="display:flex; align-items:center; justify-content: flex-start ; flex-direction:row;">\n    <img style="margin-right: 2%; width: 7%;" src="../assets/imgs/question.png">\n    <h6 >Trung tâm chăm sóc khách hàng</h6>\n  </ion-grid>\n\n\n\n  <ion-grid style="display:flex ;flex-direction:row; width: 60%;">\n    <button><img src="../assets/imgs/facebook.png"> </button>\n    <button><img src="../assets/imgs/phone.png"><a href="callto:18001090">18001090</a></button>\n\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/profile/profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/profile/profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Hồ sơ Cá Nhân</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <img class="image" style="width: 40%" src="../assets/imgs/signup.png">\n  <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>\n    <h2 style="text-align: center;"><b>{{ item.name }}</b></h2>\n  </button>\n\n  <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">\n      <ion-col col-6><img class="avatar" style="width: 30%;" src="../assets/imgs/orderNumber.png">Đơn mua hang: XRNW</ion-col>\n      <ion-col col-6 style="font-size: 40%;"><button ion-button clear (click)="goOrderHistoriesPage()">Xem lịch sử giao hàng</button></ion-col>\n\n  </ion-grid>\n\n  <ion-grid style="display:flex; justify-content: center; align-items: center; flex-direction: row;">\n    <button><img src="../assets/imgs/waitingforConfirm.png">Chờ xác nhận</button>\n    <button><img src="../assets/imgs/waitingforPills.png">Chờ lấy thuốc</button>\n    <button><img src="../assets/imgs/deliverPills.png">Đang giao thuốc</button>\n    <button><img src="../assets/imgs/delivered.png">Hoàn tất</button>\n  </ion-grid>\n<hr>\n  <ion-grid style="display:flex; align-items:center; justify-content: flex-start ; flex-direction:row;">\n    <img style="margin-right: 2%; width: 7%;" src="../assets/imgs/question.png">\n    <h6 >Trung tâm chăm sóc khách hàng</h6>\n  </ion-grid>\n\n\n\n  <ion-grid style="display:flex ;flex-direction:row; width: 60%;">\n    <button><img src="../assets/imgs/facebook.png"> </button>\n    <button><img src="../assets/imgs/phone.png"><a href="callto:18001090">18001090</a></button>\n\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/trucnguyen/Documents/GitHub/mePill/src/pages/profile/profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"]])
     ], ProfilePage);

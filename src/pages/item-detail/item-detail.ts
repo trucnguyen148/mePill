@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AddItemPage } from '../add-item/add-item';
+
+
 
 /**
  * Generated class for the ItemDetailPage page.

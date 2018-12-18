@@ -30833,6 +30833,14 @@ page-signup p {
   text-align: center;
 }
 
+page-treatment .treatment-list ion-item {
+  padding-left: 0;
+}
+
+page-treatment .treatment-list ion-item .item-inner {
+  padding-left: 16px;
+}
+
 page-verify h3 {
   margin-bottom: 15%;
 }

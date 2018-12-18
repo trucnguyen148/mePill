@@ -7,7 +7,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Add Item
+      Thêm liệu trình
     </ion-title>
       <ion-buttons end>
         <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
@@ -19,8 +19,8 @@
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   <form (submit)="doSubmit($event)" [formGroup]="langForm" style="text-align: center">
   <ion-list radio-group formControlName="langs" [(ngModel)]="title">
-    <ion-item *ngFor="let item of items">
-      <ion-label>{{item.title }}</ion-label>
+    <ion-item *ngFor="let item of items" style="padding-left: 0">
+      <ion-label style="padding-left: 16px">{{item.title }}</ion-label>
       <ion-radio value="{{item.title}}"  checked="false" ></ion-radio>
     </ion-item>
   </ion-list>

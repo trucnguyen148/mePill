@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Slides, Toggle } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the HomePage page.
@@ -51,11 +51,35 @@ export class HomePage {
       }
     ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
+  }
+
+  presentConfirm() {
+    let alert = this.alertCtrl.create({
+      title: 'Nhắc uống thuốc',
+      message: 'Đã đến giờ uống thuốc! Mời bạn sử dụng thuốc đúng giờ để có hiệu quả tốt nhất.',
+      buttons: [
+        {
+          text: 'Đánh dấu',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Bỏ qua',
+          handler: () => {
+            console.log('Buy clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
+    this.presentConfirm();
   }
 
 }

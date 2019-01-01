@@ -19,7 +19,6 @@ import {
   templateUrl: 'add-item.html',
 })
 export class AddItemPage {
-
   title: string;
   description: string;
   items;
@@ -85,8 +84,6 @@ export class AddItemPage {
     ];
   }
 
-  
-
   getItems(ev) {
     // Reset items back to all of the items
     this.initializeItems();
@@ -102,20 +99,16 @@ export class AddItemPage {
     }
   }
 
-
   saveItem(){
-
     let newItem = {
       title: this.title,
       description: this.description,
     };
-
     this.view.dismiss(newItem);
-
   }
 
   close(){
     this.view.dismiss();
   }
-
 }
+

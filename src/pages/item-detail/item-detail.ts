@@ -18,15 +18,15 @@ import { AddItemPage } from '../add-item/add-item';
 })
 export class ItemDetailPage {
   title;
-   description;
+  description;
 
-   constructor(public navParams: NavParams){
+  constructor(public navParams: NavParams){
 
-   }
+  }
 
-   ionViewDidLoad() {
-     this.title = this.navParams.get('item').title;
-     this.description = this.navParams.get('item').description;
-   }
+  ionViewDidLoad() {
+    this.title = this.navParams.get('item').title;
+    this.description = this.navParams.get('item').description;
+  }
 
- }
+}

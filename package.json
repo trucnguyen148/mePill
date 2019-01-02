@@ -26,6 +26,7 @@
     "@ionic-native/status-bar": "~4.17.0",
     "@ionic/pro": "2.0.3",
     "@ionic/storage": "2.2.0",
+    "cordova-browser": "^5.0.4",
     "cordova-ios": "4.5.5",
     "cordova-plugin-calendar": "git+https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin.git",
     "cordova-plugin-camera": "4.0.3",
@@ -64,7 +65,8 @@
       "cordova-plugin-camera": {}
     },
     "platforms": [
-      "ios"
+      "ios",
+      "browser"
     ]
   }
 }

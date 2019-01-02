@@ -23,7 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { CalendarModule } from 'ionic3-calendar-en';
 import { SelectSearchableModule } from 'ionic-select-searchable';
 import { IonicPageModule } from 'ionic-angular';
-
+import { Camera } from '@ionic-native/camera';
 
 
 @NgModule({
@@ -71,7 +71,7 @@ import { IonicPageModule } from 'ionic-angular';
   ],
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen, Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

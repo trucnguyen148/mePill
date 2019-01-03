@@ -28,6 +28,9 @@
     "cordova-plugin-calendar": {
       "CALENDAR_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {}

@@ -1,96 +1,4 @@
-webpackJsonp([13],{
-
-/***/ 103:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddItemPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(14);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the AddItemPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var AddItemPage = /** @class */ (function () {
-    function AddItemPage(navCtrl, view) {
-        this.navCtrl = navCtrl;
-        this.view = view;
-        this.langForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormGroup"]({
-            "langs": new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormControl"]()
-        });
-    }
-    AddItemPage.prototype.doSubmit = function (event) {
-        console.log('Submitting form', this.langForm.value);
-        event.preventDefault();
-    };
-    AddItemPage.prototype.initializeItems = function () {
-        this.items = [
-            {
-                'title': 'Amsterdam',
-                'description': '0449214167',
-                'color': '#E63135'
-            },
-            {
-                'title': 'Bogota',
-                'description': '0449214167',
-                'color': '#E63135'
-            },
-            {
-                'title': 'Buenos Aires',
-                'description': '0449214167',
-                'color': '#E63135'
-            },
-        ];
-    };
-    AddItemPage.prototype.getItems = function (ev) {
-        // Reset items back to all of the items
-        this.initializeItems();
-        // set val to the value of the ev target
-        var val = ev.target.value;
-        // if the value is an empty string don't filter the items
-        if (val && val.trim() != '') {
-            this.items = this.items.filter(function (item) {
-                return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
-            });
-        }
-    };
-    AddItemPage.prototype.saveItem = function () {
-        var newItem = {
-            title: this.title,
-            description: this.description,
-        };
-        this.view.dismiss(newItem);
-    };
-    AddItemPage.prototype.close = function () {
-        this.view.dismiss();
-    };
-    AddItemPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-add-item',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/add-item/add-item.html"*/'<!--\n  Generated template for the AddItemPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Add Item\n    </ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>\n      </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <form (submit)="doSubmit($event)" [formGroup]="langForm" style="text-align: center">\n  <ion-list radio-group formControlName="langs" [(ngModel)]="title">\n    <ion-item *ngFor="let item of items">\n      <ion-label>{{item.title }}</ion-label>\n      <ion-radio value="{{item.title}}"  checked="false" ></ion-radio>\n    </ion-item>\n  </ion-list>\n  <button ion-button color="primary" (click)="saveItem()">Save</button>\n  </form>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/add-item/add-item.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"]])
-    ], AddItemPage);
-    return AddItemPage;
-}());
-
-//# sourceMappingURL=add-item.js.map
-
-/***/ }),
+webpackJsonp([11],{
 
 /***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -126,7 +34,7 @@ var CalendarPage = /** @class */ (function () {
     };
     CalendarPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-calendar',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/calendar/calendar.html"*/'<!--\n  Generated template for the CalendarPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>calendar</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-calendar #calendar></ion-calendar>\n\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/calendar/calendar.html"*/,
+            selector: 'page-calendar',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/calendar/calendar.html"*/'<!--\n  Generated template for the CalendarPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <!-- <ion-title>Tháng 10, 2018 (69%)</ion-title> -->\n    <ion-title>\n        Tháng 10, 2018 <nav style="color: blue">(69%)</nav>\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-calendar #calendar></ion-calendar>\n  \n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/calendar/calendar.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
     ], CalendarPage);
@@ -162,43 +70,76 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, navParams) {
+    function HomePage(navCtrl, navParams, alertCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
         this.slides = [
             {
-                time: "8:00",
+                time: "8:00 Sáng",
                 description: "Đã uống",
                 image: "assets/imgs/pill.png",
-                name: "PENICILIN...100MG",
+                name: "PENICILIN ..... 100MG",
                 number: "Số lượng 1 viên",
-                name1: "PENICILIN...100MG",
+                name1: "PENICILIN ..... 100MG",
                 number1: "Số lượng 1 viên",
-                name2: "PENICILIN...100MG",
+                name2: "PENICILIN ..... 100MG",
                 number2: "Số lượng 1 viên",
-                name3: "PENICILIN...100MG",
+                name3: "PENICILIN ..... 100MG",
                 number3: "Số lượng 1 viên",
+                name4: "PENICILIN  ..... 100MG",
+                number4: "Số lượng 1 viên",
+                name5: "PENICILIN ..... 100MG",
+                number5: "Số lượng 1 viên",
+                name6: "PENICILIN ..... 100MG",
+                number6: "Số lượng 1 viên",
+                color: "#0c63f0"
             },
             {
-                time: "12:00",
+                time: "12:00 Trưa",
                 description: "Chưa uống",
                 image: "assets/imgs/pill.png",
+                color: "#FC231C"
             },
             {
-                time: "19:00",
+                time: "19:00 Tối",
                 description: "Chưa uống",
                 image: "assets/imgs/pill.png",
+                color: "#FC231C"
             }
         ];
     }
+    HomePage.prototype.presentConfirm = function () {
+        var alert = this.alertCtrl.create({
+            title: 'Nhắc uống thuốc',
+            message: 'Đã đến giờ uống thuốc! Mời bạn sử dụng thuốc đúng giờ để có hiệu quả tốt nhất.',
+            buttons: [
+                {
+                    text: 'Đánh dấu',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Bỏ qua',
+                    handler: function () {
+                        console.log('Buy clicked');
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
     HomePage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad HomePage');
+        this.presentConfirm();
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/home/home.html"*/'<!--\n  Generated template for the HomePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n      <p>Th 3 22/12/2018 </p>\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n  <h4>Liệu trình trong ngày</h4>\n    <ion-scroll scrollX="true" style="width:100%; height:300px">\n        <ion-row nowrap  >\n          <div *ngFor="let slide of slides">\n            <ion-card style="width: 180px; background-color: #faf9f9">\n              <ion-card-header>\n                <ion-grid>\n                  <ion-row>\n                    <ion-col col-1>\n                      <ion-checkbox color="primary" checked="false"></ion-checkbox>\n                    </ion-col>\n                    <ion-col col-11 style="text-align: center;">\n                      <h1 [innerHTML]="slide.time"></h1>\n                      <p style="color: #0c63f0;"[innerHTML]="slide.description"></p>\n                    </ion-col>\n                  </ion-row>\n                </ion-grid>\n              </ion-card-header>\n              <ion-card-content>\n                <img style="width: 80%; display: block; margin-left: auto; margin-right: auto;" [src]="slide.image" class="slide-image"/>\n              </ion-card-content>\n            </ion-card>\n          </div>\n        </ion-row>\n      </ion-scroll>\n\n    <h4>Chi tiết liệu trình</h4>\n    <hr style="background-color: #0c63f0; height: 2px; border: 0;">\n    <ion-scroll scrollY="true"style="width:100%; height:100%" >\n      <div *ngFor="let slide of slides">\n        <h6 [innerHTML]="slide.name"></h6>\n        <p [innerHTML]="slide.number"></p>\n      </div>\n      <div *ngFor="let slide of slides">\n        <h6 [innerHTML]="slide.name1"></h6>\n        <p [innerHTML]="slide.number1"></p>\n      </div>\n      <div *ngFor="let slide of slides">\n        <h6 [innerHTML]="slide.name2"></h6>\n        <p [innerHTML]="slide.number2"></p>\n      </div>\n      <div *ngFor="let slide of slides">\n        <h6 [innerHTML]="slide.name3"></h6>\n        <p [innerHTML]="slide.number3"></p>\n      </div>\n    </ion-scroll>\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/home/home.html"*/,
+            selector: 'page-home',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/home/home.html"*/'<!--\n  Generated template for the HomePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header padding style="padding-bottom: 0">\n\n  <ion-navbar style="background: #ffffff; padding: 0">\n    <!-- <ion-title style="background-color: #ffffff">\n      <p>Th 3 22/12/2018</p>\n      <p>Chào buổi sáng sd</p>\n    </ion-title> -->\n    <div>\n      <p>Th 3 22/12/2018</p>\n      <h4>Chào buổi sáng</h4>\n    </div>\n    <div id="home-setting">\n      <i class="fas fa-cog"></i>\n    </div>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n  <h4>Liệu trình trong ngày</h4>\n  <ion-scroll scrollX="true" style="width:100%; height:300px" class="pills">\n    <ion-row nowrap>\n      <div *ngFor="let slide of slides" class="pills-item">\n        <ion-card style="width: 180px; background-color: #faf9f9">\n          <ion-card-header>\n            <ion-grid>\n              <ion-row>\n                <ion-col col-3>\n                  <ion-checkbox color="primary" checked="false"></ion-checkbox>\n                </ion-col>\n                <ion-col col-9>\n                  <h1 [innerHTML]="slide.time"></h1>\n                  <h1 [style.color]="slide.color" [innerHTML]="slide.description"></h1>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-card-header>\n          <ion-card-content>\n            <img style="width: 80%; display: block; margin-left: auto; margin-right: auto;" [src]="slide.image" class="slide-image"/>\n          </ion-card-content>\n        </ion-card>\n      </div>\n    </ion-row>\n  </ion-scroll> \n\n    <h4>Chi tiết liệu trình</h4>\n    <hr style="background-color: #0c63f0; height: 2px; border: 0;">\n    <ion-scroll scrollY="true"style="width:100%; height:50%" >\n      <div class="pills-details">\n        <div *ngFor="let slide of slides">\n          <div class="pills-details-left">\n            <h6 [innerHTML]="slide.name"></h6>\n            <p [innerHTML]="slide.number"></p>  \n          </div>\n        </div>\n        <div class="pill-details-right" style="display: flex; align-items: center">\n          <i class="fas fa-angle-right" style="font-size: 20px"></i>\n        </div>\n      </div>\n      <div class="pills-details">\n          <div *ngFor="let slide of slides">\n            <div class="pills-details-left">\n              <h6 [innerHTML]="slide.name"></h6>\n              <p [innerHTML]="slide.number"></p>  \n            </div>\n          </div>\n          <div class="pill-details-right" style="display: flex; align-items: center">\n            <i class="fas fa-angle-right" style="font-size: 20px"></i>\n          </div>\n        </div>\n        <div class="pills-details">\n            <div *ngFor="let slide of slides">\n              <div class="pills-details-left">\n                <h6 [innerHTML]="slide.name"></h6>\n                <p [innerHTML]="slide.number"></p>  \n              </div>\n            </div>\n            <div class="pill-details-right" style="display: flex; align-items: center">\n              <i class="fas fa-angle-right" style="font-size: 20px"></i>\n            </div>\n          </div>\n          <div class="pills-details">\n              <div *ngFor="let slide of slides">\n                <div class="pills-details-left">\n                  <h6 [innerHTML]="slide.name"></h6>\n                  <p [innerHTML]="slide.number"></p>  \n                </div>\n              </div>\n              <div class="pill-details-right" style="display: flex; align-items: center">\n                <i class="fas fa-angle-right" style="font-size: 20px"></i>\n              </div>\n            </div>\n            <div class="pills-details">\n                <div *ngFor="let slide of slides">\n                  <div class="pills-details-left">\n                    <h6 [innerHTML]="slide.name"></h6>\n                    <p [innerHTML]="slide.number"></p>  \n                  </div>\n                </div>\n                <div class="pill-details-right" style="display: flex; align-items: center">\n                  <i class="fas fa-angle-right" style="font-size: 20px"></i>\n                </div>\n              </div>\n              <div class="pills-details">\n                  <div *ngFor="let slide of slides">\n                    <div class="pills-details-left">\n                      <h6 [innerHTML]="slide.name"></h6>\n                      <p [innerHTML]="slide.number"></p>  \n                    </div>\n                  </div>\n                  <div class="pill-details-right" style="display: flex; align-items: center">\n                    <i class="fas fa-angle-right" style="font-size: 20px"></i>\n                  </div>\n                </div>\n      <!-- <div *ngFor="let slide of slides">\n          <div class="pills-details-left">\n              <h6 [innerHTML]="slide.name1"></h6>\n              <p [innerHTML]="slide.number1"></p>  \n            </div>\n            <div class="pill-details-right">\n              <i class="fas fa-angle-right"></i>\n            </div>\n      </div>\n      <div *ngFor="let slide of slides">\n          <div class="pills-details-left">\n              <h6 [innerHTML]="slide.name2"></h6>\n              <p [innerHTML]="slide.number2"></p>  \n            </div>\n            <div class="pill-details-right">\n              <i class="fas fa-angle-right"></i>\n            </div>\n      </div>\n      <div *ngFor="let slide of slides">\n          <div class="pills-details-left">\n              <h6 [innerHTML]="slide.name3"></h6>\n              <p [innerHTML]="slide.number3"></p>  \n            </div>\n            <div class="pill-details-right">\n              <i class="fas fa-angle-right"></i>\n            </div>\n      </div>\n      <div *ngFor="let slide of slides">\n          <div class="pills-details-left">\n              <h6 [innerHTML]="slide.name4"></h6>\n              <p [innerHTML]="slide.number4"></p>  \n            </div>\n            <div class="pill-details-right">\n              <i class="fas fa-angle-right"></i>\n            </div>\n      </div>\n      <div *ngFor="let slide of slides">\n          <div class="pills-details-left">\n              <h6 [innerHTML]="slide.name5"></h6>\n              <p [innerHTML]="slide.number5"></p>  \n            </div>\n            <div class="pill-details-right">\n              <i class="fas fa-angle-right"></i>\n            </div>\n      </div>\n      <div *ngFor="let slide of slides">\n          <div class="pills-details-left">\n              <h6 [innerHTML]="slide.name6"></h6>\n              <p [innerHTML]="slide.number6"></p>  \n            </div>\n            <div class="pill-details-right">\n              <i class="fas fa-angle-right"></i>\n            </div>\n      </div> -->\n    </ion-scroll>\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/home/home.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["AlertController"]])
     ], HomePage);
     return HomePage;
 }());
@@ -241,7 +182,7 @@ var ChattingPage = /** @class */ (function () {
     };
     ChattingPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-chatting',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/chatting/chatting.html"*/'<!--\n  Generated template for the ChattingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>chatting</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/chatting/chatting.html"*/,
+            selector: 'page-chatting',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/chatting/chatting.html"*/'<!--\n  Generated template for the ChattingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Trò chuyện</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/chatting/chatting.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
     ], ChattingPage);
@@ -286,7 +227,7 @@ var ItemDetailPage = /** @class */ (function () {
     };
     ItemDetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-item-detail',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/item-detail/item-detail.html"*/'<!--\n  Generated template for the ItemDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-card>\n    <ion-card-content>\n      {{description}}\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/item-detail/item-detail.html"*/,
+            selector: 'page-item-detail',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/item-detail/item-detail.html"*/'<!--\n  Generated template for the ItemDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-card>\n    <ion-card-content>\n        <div class="pill-detail-title">\n          <h1>Mô tả</h1>\n        </div>\n      <div class="description">\n        {{description}}\n        Panadol Extra chứa paracetamol là một chất hạ sốt, giảm đau và caffeine là một chất tăng cường tác dụng giảm đau của paracetamol. Panadol Extra có hiệu quả trong điều trị đau nhẹ đến vừa và hạ sốt bao gồm: Đau đầu, đau họng, đau cơ.\n      </div>\n    </ion-card-content>\n    <ion-card-content>\n      <div class="pill-detail-title">\n        <h1>Thành phần</h1>\n      </div>\n      <div class="des1">\n        50 mg Paracetamol, 65mg Caffeine\n      </div>\n    </ion-card-content>\n    <ion-card-content>\n      <div class="pill-detail-title">\n        <h1>Liều dùng</h1>\n      </div>\n      <div class="des">\n        Mỗi lần 1 viên\n      </div>\n    </ion-card-content>\n    <ion-card-content>\n      <div class="pill-detail-title">\n        <h1>Cảnh báo</h1>    \n      </div>\n      <div class="des">\n        Bác sĩ cần cảnh báo bệnh nhân về các dấu hiệu của phản ứng trên da nghiêm trọng như hội chứng Stevens-Johnson (SJS), hội chứng hoại tử da nhiễm độc (TEN) hay hội chứng Lyell, hội chứng ngoại ban mụn mủ toàn thân cấp tính (AGEP). Có sự gia tăng nguy cơ gây hại của paracetamol đối với gan trên những bệnh nhân đang bị các bệnh về gan. Tham khảo ý kiến bác sĩ đối với các bệnh nhân suy gan, suy thận hoặc khi triệu chứng còn dai dẳng. Tránh dùng quá nhiều caffeine (như cà phê, trà và một số đồ uống đóng hộp khác) trong khi đang dùng thuốc này. Để xa tầm tay trẻ em.    \n      </div>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/item-detail/item-detail.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
     ], ItemDetailPage);
@@ -298,73 +239,6 @@ var ItemDetailPage = /** @class */ (function () {
 /***/ }),
 
 /***/ 108:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TreatmentPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_item_add_item__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__item_detail_item_detail__ = __webpack_require__(107);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the TreatmentPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var TreatmentPage = /** @class */ (function () {
-    function TreatmentPage(navCtrl, modalCtrl) {
-        this.navCtrl = navCtrl;
-        this.modalCtrl = modalCtrl;
-        this.items = [];
-    }
-    TreatmentPage.prototype.ionViewDidLoad = function () {
-    };
-    TreatmentPage.prototype.addItem = function () {
-        var _this = this;
-        var addModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__add_item_add_item__["a" /* AddItemPage */]);
-        addModal.onDidDismiss(function (item) {
-            if (item) {
-                _this.saveItem(item);
-            }
-        });
-        addModal.present();
-    };
-    TreatmentPage.prototype.saveItem = function (item) {
-        this.items.push(item);
-    };
-    TreatmentPage.prototype.viewItem = function (item) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__item_detail_item_detail__["a" /* ItemDetailPage */], {
-            item: item,
-        });
-    };
-    TreatmentPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-treatment',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/treatment/treatment.html"*/'<!--\n  Generated template for the TreatmentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<<ion-header>\n  <ion-navbar>\n    <ion-title>\n    Quản lý thuốc\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-grid  style="display: flex; align-items: center; flex-direction: row;">\n    <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>\n\n    <h6 style="margin-top: 1rem; padding-left: 1rem;">Thêm liệu trình</h6>\n  </ion-grid>\n\n<hr>\n  <h6>Liệu trình bổ sung</h6>\n  <ion-list class="treatment-list">\n    <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item.title}}</ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/treatment/treatment.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"]])
-    ], TreatmentPage);
-    return TreatmentPage;
-}());
-
-//# sourceMappingURL=treatment.js.map
-
-/***/ }),
-
-/***/ 109:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -410,7 +284,7 @@ var PrivateProfilePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 110:
+/***/ 109:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -460,14 +334,14 @@ var OrderHistoriesPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 111:
+/***/ 110:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verify_verify__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verify_verify__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -512,7 +386,7 @@ var SignupPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 112:
+/***/ 111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -557,7 +431,7 @@ var VerifyPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 113:
+/***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -636,7 +510,7 @@ var WelcomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 122:
+/***/ 121:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -649,64 +523,56 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 122;
+webpackEmptyAsyncContext.id = 121;
 
 /***/ }),
 
-/***/ 163:
+/***/ 162:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../pages/add-item/add-item.module": [
-		413,
-		12
-	],
 	"../pages/calendar/calendar.module": [
 		414,
-		11
+		10
 	],
 	"../pages/chatting/chatting.module": [
 		416,
-		10
+		9
 	],
 	"../pages/home/home.module": [
 		415,
-		9
+		8
 	],
 	"../pages/item-detail/item-detail.module": [
 		417,
-		8
+		7
 	],
 	"../pages/login/login.module": [
 		418,
-		7
+		6
 	],
 	"../pages/order-histories/order-histories.module": [
 		419,
-		6
+		5
 	],
 	"../pages/private-profile/private-profile.module": [
 		420,
-		5
-	],
-	"../pages/profile/profile.module": [
-		422,
 		4
 	],
-	"../pages/signup/signup.module": [
+	"../pages/profile/profile.module": [
 		421,
 		3
 	],
-	"../pages/treatment/treatment.module": [
-		423,
+	"../pages/signup/signup.module": [
+		422,
 		2
 	],
 	"../pages/verify/verify.module": [
-		424,
+		423,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		425,
+		424,
 		0
 	]
 };
@@ -721,19 +587,19 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 163;
+webpackAsyncContext.id = 162;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 164:
+/***/ 163:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__treatment_treatment__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__treatment_treatment__ = __webpack_require__(164);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chatting_chatting__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__calendar_calendar__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_profile__ = __webpack_require__(52);
@@ -772,14 +638,220 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 332:
+/***/ 164:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TreatmentPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_item_add_item__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__item_detail_item_detail__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(166);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the TreatmentPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+// @IonicPage()
+var TreatmentPage = /** @class */ (function () {
+    function TreatmentPage(navCtrl, modalCtrl, camera) {
+        this.navCtrl = navCtrl;
+        this.modalCtrl = modalCtrl;
+        this.camera = camera;
+        this.items = [];
+    }
+    TreatmentPage.prototype.ionViewDidLoad = function () {
+    };
+    TreatmentPage.prototype.takePhoto = function () {
+        var _this = this;
+        var options = {
+            quality: 50,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE
+        };
+        this.camera.getPicture(options).then(function (imageData) {
+            // imageData is either a base64 encoded string or a file URI
+            // If it's base64 (DATA_URL):
+            _this.base64Image = 'data:image/jpeg;base64,' + imageData;
+        }, function (err) {
+            // Handle error
+            alert(err);
+        });
+    };
+    TreatmentPage.prototype.addItem = function () {
+        var _this = this;
+        var addModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__add_item_add_item__["a" /* AddItemPage */]);
+        addModal.onDidDismiss(function (item) {
+            if (item) {
+                _this.saveItem(item);
+            }
+        });
+        addModal.present();
+    };
+    TreatmentPage.prototype.saveItem = function (item) {
+        this.items.push(item);
+    };
+    TreatmentPage.prototype.viewItem = function (item) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__item_detail_item_detail__["a" /* ItemDetailPage */], {
+            item: item,
+        });
+    };
+    TreatmentPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-treatment',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/treatment/treatment.html"*/'<!--\n  Generated template for the TreatmentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>\n    Quản lý thuốc\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-grid  style="display: flex; align-items: center; flex-direction: row;">\n    <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>\n\n    <h6 style="margin-top: 1rem; padding-left: 1rem;">Thêm liệu trình</h6>\n  </ion-grid>\n  <ion-grid>\n    <button ion-button (click)="takePhoto()">Chụp đơn thuốc</button>\n    <p align="center"><img src="{{base64Image}}" alt=""></p>\n  </ion-grid>\n\n<hr>\n  <h6>Liệu trình bổ sung</h6>\n  <ion-list class="treatment-list">\n    <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item.title}}</ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/treatment/treatment.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__["a" /* Camera */]])
+    ], TreatmentPage);
+    return TreatmentPage;
+}());
+
+//# sourceMappingURL=treatment.js.map
+
+/***/ }),
+
+/***/ 165:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddItemPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(14);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the AddItemPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+// @IonicPage()
+var AddItemPage = /** @class */ (function () {
+    function AddItemPage(navCtrl, view) {
+        this.navCtrl = navCtrl;
+        this.view = view;
+        this.langForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormGroup"]({
+            "langs": new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormControl"]()
+        });
+    }
+    AddItemPage.prototype.doSubmit = function (event) {
+        console.log('Submitting form', this.langForm.value);
+        event.preventDefault();
+    };
+    AddItemPage.prototype.initializeItems = function () {
+        this.items = [
+            {
+                'title': 'PENICILIN 100MG',
+                'color': '#E63135',
+                'description': 'Panadol Extra chứa paracetamol là một chất hạ sốt, giảm đau và caffeine là một chất tăng cường tác dụng giảm đau của paracetamol. Panadol Extra có hiệu quả trong điều trị đau nhẹ đến vừa và hạ sốt bao gồm: Đau đầu, đau họng, đau cơ.',
+                'des1': '50 mg Paracetamol, 65mg Caffeine',
+                'des2': 'Mỗi lần 1 viên',
+                'des3': 'Bác sĩ cần cảnh báo bệnh nhân về các dấu hiệu của phản ứng trên da nghiêm trọng như hội chứng Stevens-Johnson (SJS), hội chứng hoại tử da nhiễm độc (TEN) hay hội chứng Lyell, hội chứng ngoại ban mụn mủ toàn thân cấp tính (AGEP). Có sự gia tăng nguy cơ gây hại của paracetamol đối với gan trên những bệnh nhân đang bị các bệnh về gan. Tham khảo ý kiến bác sĩ đối với các bệnh nhân suy gan, suy thận hoặc khi triệu chứng còn dai dẳng. Tránh dùng quá nhiều caffeine (như cà phê, trà và một số đồ uống đóng hộp khác) trong khi đang dùng thuốc này. Để xa tầm tay trẻ em.'
+            },
+            {
+                'title': 'PANADOL 100MG',
+                'color': '#E63135',
+                'description': 'Panadol Extra chứa paracetamol là một chất hạ sốt, giảm đau và caffeine là một chất tăng cường tác dụng giảm đau của paracetamol. Panadol Extra có hiệu quả trong điều trị đau nhẹ đến vừa và hạ sốt bao gồm: Đau đầu, đau họng, đau cơ.',
+                'des1': '50 mg Paracetamol, 65mg Caffeine',
+                'des2': 'Mỗi lần 1 viên',
+                'des3': 'Bác sĩ cần cảnh báo bệnh nhân về các dấu hiệu của phản ứng trên da nghiêm trọng như hội chứng Stevens-Johnson (SJS), hội chứng hoại tử da nhiễm độc (TEN) hay hội chứng Lyell, hội chứng ngoại ban mụn mủ toàn thân cấp tính (AGEP). Có sự gia tăng nguy cơ gây hại của paracetamol đối với gan trên những bệnh nhân đang bị các bệnh về gan. Tham khảo ý kiến bác sĩ đối với các bệnh nhân suy gan, suy thận hoặc khi triệu chứng còn dai dẳng. Tránh dùng quá nhiều caffeine (như cà phê, trà và một số đồ uống đóng hộp khác) trong khi đang dùng thuốc này. Để xa tầm tay trẻ em.'
+            },
+            {
+                'title': 'TAFFEL 200MG',
+                'color': '#E63135',
+                'description': 'Panadol Extra chứa paracetamol là một chất hạ sốt, giảm đau và caffeine là một chất tăng cường tác dụng giảm đau của paracetamol. Panadol Extra có hiệu quả trong điều trị đau nhẹ đến vừa và hạ sốt bao gồm: Đau đầu, đau họng, đau cơ.',
+                'des1': '50 mg Paracetamol, 65mg Caffeine',
+                'des2': 'Mỗi lần 1 viên',
+                'des3': 'Bác sĩ cần cảnh báo bệnh nhân về các dấu hiệu của phản ứng trên da nghiêm trọng như hội chứng Stevens-Johnson (SJS), hội chứng hoại tử da nhiễm độc (TEN) hay hội chứng Lyell, hội chứng ngoại ban mụn mủ toàn thân cấp tính (AGEP). Có sự gia tăng nguy cơ gây hại của paracetamol đối với gan trên những bệnh nhân đang bị các bệnh về gan. Tham khảo ý kiến bác sĩ đối với các bệnh nhân suy gan, suy thận hoặc khi triệu chứng còn dai dẳng. Tránh dùng quá nhiều caffeine (như cà phê, trà và một số đồ uống đóng hộp khác) trong khi đang dùng thuốc này. Để xa tầm tay trẻ em.'
+            },
+            {
+                'title': 'CẢM XUYÊN HƯƠNG 200MG',
+                'color': '#E63135',
+                'description': 'Panadol Extra chứa paracetamol là một chất hạ sốt, giảm đau và caffeine là một chất tăng cường tác dụng giảm đau của paracetamol. Panadol Extra có hiệu quả trong điều trị đau nhẹ đến vừa và hạ sốt bao gồm: Đau đầu, đau họng, đau cơ.',
+                'des1': '50 mg Paracetamol, 65mg Caffeine',
+                'des2': 'Mỗi lần 1 viên',
+                'des3': 'Bác sĩ cần cảnh báo bệnh nhân về các dấu hiệu của phản ứng trên da nghiêm trọng như hội chứng Stevens-Johnson (SJS), hội chứng hoại tử da nhiễm độc (TEN) hay hội chứng Lyell, hội chứng ngoại ban mụn mủ toàn thân cấp tính (AGEP). Có sự gia tăng nguy cơ gây hại của paracetamol đối với gan trên những bệnh nhân đang bị các bệnh về gan. Tham khảo ý kiến bác sĩ đối với các bệnh nhân suy gan, suy thận hoặc khi triệu chứng còn dai dẳng. Tránh dùng quá nhiều caffeine (như cà phê, trà và một số đồ uống đóng hộp khác) trong khi đang dùng thuốc này. Để xa tầm tay trẻ em.'
+            },
+            {
+                'title': 'SITI 200MG',
+                'color': '#E63135',
+                'description': 'Panadol Extra chứa paracetamol là một chất hạ sốt, giảm đau và caffeine là một chất tăng cường tác dụng giảm đau của paracetamol. Panadol Extra có hiệu quả trong điều trị đau nhẹ đến vừa và hạ sốt bao gồm: Đau đầu, đau họng, đau cơ.',
+                'des1': '50 mg Paracetamol, 65mg Caffeine',
+                'des2': 'Mỗi lần 1 viên',
+                'des3': 'Bác sĩ cần cảnh báo bệnh nhân về các dấu hiệu của phản ứng trên da nghiêm trọng như hội chứng Stevens-Johnson (SJS), hội chứng hoại tử da nhiễm độc (TEN) hay hội chứng Lyell, hội chứng ngoại ban mụn mủ toàn thân cấp tính (AGEP). Có sự gia tăng nguy cơ gây hại của paracetamol đối với gan trên những bệnh nhân đang bị các bệnh về gan. Tham khảo ý kiến bác sĩ đối với các bệnh nhân suy gan, suy thận hoặc khi triệu chứng còn dai dẳng. Tránh dùng quá nhiều caffeine (như cà phê, trà và một số đồ uống đóng hộp khác) trong khi đang dùng thuốc này. Để xa tầm tay trẻ em.'
+            },
+        ];
+    };
+    AddItemPage.prototype.getItems = function (ev) {
+        // Reset items back to all of the items
+        this.initializeItems();
+        // set val to the value of the ev target
+        var val = ev.target.value;
+        // if the value is an empty string don't filter the items
+        if (val && val.trim() != '') {
+            this.items = this.items.filter(function (item) {
+                return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+            });
+        }
+    };
+    AddItemPage.prototype.saveItem = function () {
+        var newItem = {
+            title: this.title,
+            description: this.description,
+        };
+        this.view.dismiss(newItem);
+    };
+    AddItemPage.prototype.close = function () {
+        this.view.dismiss();
+    };
+    AddItemPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-add-item',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/add-item/add-item.html"*/'<!--\n  Generated template for the AddItemPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Thêm liệu trình\n    </ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>\n      </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <form (submit)="doSubmit($event)" [formGroup]="langForm" style="text-align: center">\n  <ion-list radio-group formControlName="langs" [(ngModel)]="title">\n    <ion-item *ngFor="let item of items" style="padding-left: 0">\n      <ion-label style="padding-left: 16px">{{item.title }}</ion-label>\n      <ion-radio value="{{item.title}}"  checked="false" ></ion-radio>\n    </ion-item>\n  </ion-list>\n  <button ion-button color="primary" (click)="saveItem()">Save</button>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/add-item/add-item.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"]])
+    ], AddItemPage);
+    return AddItemPage;
+}());
+
+//# sourceMappingURL=add-item.js.map
+
+/***/ }),
+
+/***/ 333:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrivateProfilePage", function() { return PrivateProfilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(333);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(356);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(9);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -813,7 +885,7 @@ var PrivateProfilePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 355:
+/***/ 356:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -821,32 +893,34 @@ var PrivateProfilePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_welcome_welcome__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_welcome_welcome__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_signup_signup__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_verify_verify__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_signup_signup__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_verify_verify__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_treatment_treatment__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_add_item_add_item__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_treatment_treatment__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_add_item_add_item__ = __webpack_require__(165);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_item_detail_item_detail__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_chatting_chatting__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_calendar_calendar__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_profile_profile__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_private_profile_private_profile__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_order_histories_order_histories__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_tabs_tabs__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_status_bar__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_splash_screen__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ionic3_calendar_en__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ionic_select_searchable__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_private_profile_private_profile__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_order_histories_order_histories__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_tabs_tabs__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_status_bar__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_splash_screen__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ionic3_calendar_en__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ionic_select_searchable__ = __webpack_require__(413);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_ionic_select_searchable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_camera__ = __webpack_require__(166);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -896,7 +970,6 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicModule"].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/add-item/add-item.module#AddItemPageModule', name: 'AddItemPage', segment: 'add-item', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/calendar/calendar.module#CalendarPageModule', name: 'CalendarPage', segment: 'calendar', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/chatting/chatting.module#ChattingPageModule', name: 'ChattingPage', segment: 'chatting', priority: 'low', defaultHistory: [] },
@@ -904,9 +977,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/order-histories/order-histories.module#OrderHistoriesPageModule', name: 'OrderHistoriesPage', segment: 'order-histories', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/private-profile/private-profile.module#PrivateProfilePageModule', name: 'PrivateProfilePage', segment: 'private-profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/treatment/treatment.module#TreatmentPageModule', name: 'TreatmentPage', segment: 'treatment', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/verify/verify.module#VerifyPageModule', name: 'VerifyPage', segment: 'verify', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                     ]
@@ -935,7 +1007,7 @@ var AppModule = /** @class */ (function () {
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_18__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_19__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_19__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_22__ionic_native_camera__["a" /* Camera */],
                 { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicErrorHandler"] }
             ]
         })
@@ -947,16 +1019,16 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 398:
+/***/ 406:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_welcome_welcome__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_welcome_welcome__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -993,256 +1065,256 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 409:
+/***/ 410:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 209,
-	"./af.js": 209,
-	"./ar": 210,
-	"./ar-dz": 211,
-	"./ar-dz.js": 211,
-	"./ar-kw": 212,
-	"./ar-kw.js": 212,
-	"./ar-ly": 213,
-	"./ar-ly.js": 213,
-	"./ar-ma": 214,
-	"./ar-ma.js": 214,
-	"./ar-sa": 215,
-	"./ar-sa.js": 215,
-	"./ar-tn": 216,
-	"./ar-tn.js": 216,
-	"./ar.js": 210,
-	"./az": 217,
-	"./az.js": 217,
-	"./be": 218,
-	"./be.js": 218,
-	"./bg": 219,
-	"./bg.js": 219,
-	"./bm": 220,
-	"./bm.js": 220,
-	"./bn": 221,
-	"./bn.js": 221,
-	"./bo": 222,
-	"./bo.js": 222,
-	"./br": 223,
-	"./br.js": 223,
-	"./bs": 224,
-	"./bs.js": 224,
-	"./ca": 225,
-	"./ca.js": 225,
-	"./cs": 226,
-	"./cs.js": 226,
-	"./cv": 227,
-	"./cv.js": 227,
-	"./cy": 228,
-	"./cy.js": 228,
-	"./da": 229,
-	"./da.js": 229,
-	"./de": 230,
-	"./de-at": 231,
-	"./de-at.js": 231,
-	"./de-ch": 232,
-	"./de-ch.js": 232,
-	"./de.js": 230,
-	"./dv": 233,
-	"./dv.js": 233,
-	"./el": 234,
-	"./el.js": 234,
-	"./en-au": 235,
-	"./en-au.js": 235,
-	"./en-ca": 236,
-	"./en-ca.js": 236,
-	"./en-gb": 237,
-	"./en-gb.js": 237,
-	"./en-ie": 238,
-	"./en-ie.js": 238,
-	"./en-il": 239,
-	"./en-il.js": 239,
-	"./en-nz": 240,
-	"./en-nz.js": 240,
-	"./eo": 241,
-	"./eo.js": 241,
-	"./es": 242,
-	"./es-do": 243,
-	"./es-do.js": 243,
-	"./es-us": 244,
-	"./es-us.js": 244,
-	"./es.js": 242,
-	"./et": 245,
-	"./et.js": 245,
-	"./eu": 246,
-	"./eu.js": 246,
-	"./fa": 247,
-	"./fa.js": 247,
-	"./fi": 248,
-	"./fi.js": 248,
-	"./fo": 249,
-	"./fo.js": 249,
-	"./fr": 250,
-	"./fr-ca": 251,
-	"./fr-ca.js": 251,
-	"./fr-ch": 252,
-	"./fr-ch.js": 252,
-	"./fr.js": 250,
-	"./fy": 253,
-	"./fy.js": 253,
-	"./gd": 254,
-	"./gd.js": 254,
-	"./gl": 255,
-	"./gl.js": 255,
-	"./gom-latn": 256,
-	"./gom-latn.js": 256,
-	"./gu": 257,
-	"./gu.js": 257,
-	"./he": 258,
-	"./he.js": 258,
-	"./hi": 259,
-	"./hi.js": 259,
-	"./hr": 260,
-	"./hr.js": 260,
-	"./hu": 261,
-	"./hu.js": 261,
-	"./hy-am": 262,
-	"./hy-am.js": 262,
-	"./id": 263,
-	"./id.js": 263,
-	"./is": 264,
-	"./is.js": 264,
-	"./it": 265,
-	"./it.js": 265,
-	"./ja": 266,
-	"./ja.js": 266,
-	"./jv": 267,
-	"./jv.js": 267,
-	"./ka": 268,
-	"./ka.js": 268,
-	"./kk": 269,
-	"./kk.js": 269,
-	"./km": 270,
-	"./km.js": 270,
-	"./kn": 271,
-	"./kn.js": 271,
-	"./ko": 272,
-	"./ko.js": 272,
-	"./ky": 273,
-	"./ky.js": 273,
-	"./lb": 274,
-	"./lb.js": 274,
-	"./lo": 275,
-	"./lo.js": 275,
-	"./lt": 276,
-	"./lt.js": 276,
-	"./lv": 277,
-	"./lv.js": 277,
-	"./me": 278,
-	"./me.js": 278,
-	"./mi": 279,
-	"./mi.js": 279,
-	"./mk": 280,
-	"./mk.js": 280,
-	"./ml": 281,
-	"./ml.js": 281,
-	"./mn": 282,
-	"./mn.js": 282,
-	"./mr": 283,
-	"./mr.js": 283,
-	"./ms": 284,
-	"./ms-my": 285,
-	"./ms-my.js": 285,
-	"./ms.js": 284,
-	"./mt": 286,
-	"./mt.js": 286,
-	"./my": 287,
-	"./my.js": 287,
-	"./nb": 288,
-	"./nb.js": 288,
-	"./ne": 289,
-	"./ne.js": 289,
-	"./nl": 290,
-	"./nl-be": 291,
-	"./nl-be.js": 291,
-	"./nl.js": 290,
-	"./nn": 292,
-	"./nn.js": 292,
-	"./pa-in": 293,
-	"./pa-in.js": 293,
-	"./pl": 294,
-	"./pl.js": 294,
-	"./pt": 295,
-	"./pt-br": 296,
-	"./pt-br.js": 296,
-	"./pt.js": 295,
-	"./ro": 297,
-	"./ro.js": 297,
-	"./ru": 298,
-	"./ru.js": 298,
-	"./sd": 299,
-	"./sd.js": 299,
-	"./se": 300,
-	"./se.js": 300,
-	"./si": 301,
-	"./si.js": 301,
-	"./sk": 302,
-	"./sk.js": 302,
-	"./sl": 303,
-	"./sl.js": 303,
-	"./sq": 304,
-	"./sq.js": 304,
-	"./sr": 305,
-	"./sr-cyrl": 306,
-	"./sr-cyrl.js": 306,
-	"./sr.js": 305,
-	"./ss": 307,
-	"./ss.js": 307,
-	"./sv": 308,
-	"./sv.js": 308,
-	"./sw": 309,
-	"./sw.js": 309,
-	"./ta": 310,
-	"./ta.js": 310,
-	"./te": 311,
-	"./te.js": 311,
-	"./tet": 312,
-	"./tet.js": 312,
-	"./tg": 313,
-	"./tg.js": 313,
-	"./th": 314,
-	"./th.js": 314,
-	"./tl-ph": 315,
-	"./tl-ph.js": 315,
-	"./tlh": 316,
-	"./tlh.js": 316,
-	"./tr": 317,
-	"./tr.js": 317,
-	"./tzl": 318,
-	"./tzl.js": 318,
-	"./tzm": 319,
-	"./tzm-latn": 320,
-	"./tzm-latn.js": 320,
-	"./tzm.js": 319,
-	"./ug-cn": 321,
-	"./ug-cn.js": 321,
-	"./uk": 322,
-	"./uk.js": 322,
-	"./ur": 323,
-	"./ur.js": 323,
-	"./uz": 324,
-	"./uz-latn": 325,
-	"./uz-latn.js": 325,
-	"./uz.js": 324,
-	"./vi": 326,
-	"./vi.js": 326,
-	"./x-pseudo": 327,
-	"./x-pseudo.js": 327,
-	"./yo": 328,
-	"./yo.js": 328,
-	"./zh-cn": 329,
-	"./zh-cn.js": 329,
-	"./zh-hk": 330,
-	"./zh-hk.js": 330,
-	"./zh-tw": 331,
-	"./zh-tw.js": 331
+	"./af": 210,
+	"./af.js": 210,
+	"./ar": 211,
+	"./ar-dz": 212,
+	"./ar-dz.js": 212,
+	"./ar-kw": 213,
+	"./ar-kw.js": 213,
+	"./ar-ly": 214,
+	"./ar-ly.js": 214,
+	"./ar-ma": 215,
+	"./ar-ma.js": 215,
+	"./ar-sa": 216,
+	"./ar-sa.js": 216,
+	"./ar-tn": 217,
+	"./ar-tn.js": 217,
+	"./ar.js": 211,
+	"./az": 218,
+	"./az.js": 218,
+	"./be": 219,
+	"./be.js": 219,
+	"./bg": 220,
+	"./bg.js": 220,
+	"./bm": 221,
+	"./bm.js": 221,
+	"./bn": 222,
+	"./bn.js": 222,
+	"./bo": 223,
+	"./bo.js": 223,
+	"./br": 224,
+	"./br.js": 224,
+	"./bs": 225,
+	"./bs.js": 225,
+	"./ca": 226,
+	"./ca.js": 226,
+	"./cs": 227,
+	"./cs.js": 227,
+	"./cv": 228,
+	"./cv.js": 228,
+	"./cy": 229,
+	"./cy.js": 229,
+	"./da": 230,
+	"./da.js": 230,
+	"./de": 231,
+	"./de-at": 232,
+	"./de-at.js": 232,
+	"./de-ch": 233,
+	"./de-ch.js": 233,
+	"./de.js": 231,
+	"./dv": 234,
+	"./dv.js": 234,
+	"./el": 235,
+	"./el.js": 235,
+	"./en-au": 236,
+	"./en-au.js": 236,
+	"./en-ca": 237,
+	"./en-ca.js": 237,
+	"./en-gb": 238,
+	"./en-gb.js": 238,
+	"./en-ie": 239,
+	"./en-ie.js": 239,
+	"./en-il": 240,
+	"./en-il.js": 240,
+	"./en-nz": 241,
+	"./en-nz.js": 241,
+	"./eo": 242,
+	"./eo.js": 242,
+	"./es": 243,
+	"./es-do": 244,
+	"./es-do.js": 244,
+	"./es-us": 245,
+	"./es-us.js": 245,
+	"./es.js": 243,
+	"./et": 246,
+	"./et.js": 246,
+	"./eu": 247,
+	"./eu.js": 247,
+	"./fa": 248,
+	"./fa.js": 248,
+	"./fi": 249,
+	"./fi.js": 249,
+	"./fo": 250,
+	"./fo.js": 250,
+	"./fr": 251,
+	"./fr-ca": 252,
+	"./fr-ca.js": 252,
+	"./fr-ch": 253,
+	"./fr-ch.js": 253,
+	"./fr.js": 251,
+	"./fy": 254,
+	"./fy.js": 254,
+	"./gd": 255,
+	"./gd.js": 255,
+	"./gl": 256,
+	"./gl.js": 256,
+	"./gom-latn": 257,
+	"./gom-latn.js": 257,
+	"./gu": 258,
+	"./gu.js": 258,
+	"./he": 259,
+	"./he.js": 259,
+	"./hi": 260,
+	"./hi.js": 260,
+	"./hr": 261,
+	"./hr.js": 261,
+	"./hu": 262,
+	"./hu.js": 262,
+	"./hy-am": 263,
+	"./hy-am.js": 263,
+	"./id": 264,
+	"./id.js": 264,
+	"./is": 265,
+	"./is.js": 265,
+	"./it": 266,
+	"./it.js": 266,
+	"./ja": 267,
+	"./ja.js": 267,
+	"./jv": 268,
+	"./jv.js": 268,
+	"./ka": 269,
+	"./ka.js": 269,
+	"./kk": 270,
+	"./kk.js": 270,
+	"./km": 271,
+	"./km.js": 271,
+	"./kn": 272,
+	"./kn.js": 272,
+	"./ko": 273,
+	"./ko.js": 273,
+	"./ky": 274,
+	"./ky.js": 274,
+	"./lb": 275,
+	"./lb.js": 275,
+	"./lo": 276,
+	"./lo.js": 276,
+	"./lt": 277,
+	"./lt.js": 277,
+	"./lv": 278,
+	"./lv.js": 278,
+	"./me": 279,
+	"./me.js": 279,
+	"./mi": 280,
+	"./mi.js": 280,
+	"./mk": 281,
+	"./mk.js": 281,
+	"./ml": 282,
+	"./ml.js": 282,
+	"./mn": 283,
+	"./mn.js": 283,
+	"./mr": 284,
+	"./mr.js": 284,
+	"./ms": 285,
+	"./ms-my": 286,
+	"./ms-my.js": 286,
+	"./ms.js": 285,
+	"./mt": 287,
+	"./mt.js": 287,
+	"./my": 288,
+	"./my.js": 288,
+	"./nb": 289,
+	"./nb.js": 289,
+	"./ne": 290,
+	"./ne.js": 290,
+	"./nl": 291,
+	"./nl-be": 292,
+	"./nl-be.js": 292,
+	"./nl.js": 291,
+	"./nn": 293,
+	"./nn.js": 293,
+	"./pa-in": 294,
+	"./pa-in.js": 294,
+	"./pl": 295,
+	"./pl.js": 295,
+	"./pt": 296,
+	"./pt-br": 297,
+	"./pt-br.js": 297,
+	"./pt.js": 296,
+	"./ro": 298,
+	"./ro.js": 298,
+	"./ru": 299,
+	"./ru.js": 299,
+	"./sd": 300,
+	"./sd.js": 300,
+	"./se": 301,
+	"./se.js": 301,
+	"./si": 302,
+	"./si.js": 302,
+	"./sk": 303,
+	"./sk.js": 303,
+	"./sl": 304,
+	"./sl.js": 304,
+	"./sq": 305,
+	"./sq.js": 305,
+	"./sr": 306,
+	"./sr-cyrl": 307,
+	"./sr-cyrl.js": 307,
+	"./sr.js": 306,
+	"./ss": 308,
+	"./ss.js": 308,
+	"./sv": 309,
+	"./sv.js": 309,
+	"./sw": 310,
+	"./sw.js": 310,
+	"./ta": 311,
+	"./ta.js": 311,
+	"./te": 312,
+	"./te.js": 312,
+	"./tet": 313,
+	"./tet.js": 313,
+	"./tg": 314,
+	"./tg.js": 314,
+	"./th": 315,
+	"./th.js": 315,
+	"./tl-ph": 316,
+	"./tl-ph.js": 316,
+	"./tlh": 317,
+	"./tlh.js": 317,
+	"./tr": 318,
+	"./tr.js": 318,
+	"./tzl": 319,
+	"./tzl.js": 319,
+	"./tzm": 320,
+	"./tzm-latn": 321,
+	"./tzm-latn.js": 321,
+	"./tzm.js": 320,
+	"./ug-cn": 322,
+	"./ug-cn.js": 322,
+	"./uk": 323,
+	"./uk.js": 323,
+	"./ur": 324,
+	"./ur.js": 324,
+	"./uz": 325,
+	"./uz-latn": 326,
+	"./uz-latn.js": 326,
+	"./uz.js": 325,
+	"./vi": 327,
+	"./vi.js": 327,
+	"./x-pseudo": 328,
+	"./x-pseudo.js": 328,
+	"./yo": 329,
+	"./yo.js": 329,
+	"./zh-cn": 330,
+	"./zh-cn.js": 330,
+	"./zh-hk": 331,
+	"./zh-hk.js": 331,
+	"./zh-tw": 332,
+	"./zh-tw.js": 332
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -1258,7 +1330,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 409;
+webpackContext.id = 410;
 
 /***/ }),
 
@@ -1269,8 +1341,8 @@ webpackContext.id = 409;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(110);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1320,8 +1392,8 @@ var LoginPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__private_profile_private_profile__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__order_histories_order_histories__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__private_profile_private_profile__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__order_histories_order_histories__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1369,7 +1441,7 @@ var ProfilePage = /** @class */ (function () {
     };
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-profile',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/profile/profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Hồ sơ Cá Nhân</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <img class="image" style="width: 40%" src="../assets/imgs/signup.png">\n  <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>\n    <h2 style="text-align: center;"><b>{{ item.name }}</b></h2>\n  </button>\n\n  <ion-grid style="display: flex; justify-content: center; align-items: center; flex-direction: row;">\n      <ion-col col-6><img class="avatar" style="width: 30%;" src="../assets/imgs/orderNumber.png">Đơn mua hang: XRNW</ion-col>\n      <ion-col col-6 style="font-size: 40%;"><button ion-button clear (click)="goOrderHistoriesPage()">Xem lịch sử giao hàng</button></ion-col>\n\n  </ion-grid>\n\n  <ion-grid style="display:flex; justify-content: center; align-items: center; flex-direction: row;">\n    <button><img src="../assets/imgs/waitingforConfirm.png">Chờ xác nhận</button>\n    <button><img src="../assets/imgs/waitingforPills.png">Chờ lấy thuốc</button>\n    <button><img src="../assets/imgs/deliverPills.png">Đang giao thuốc</button>\n    <button><img src="../assets/imgs/delivered.png">Hoàn tất</button>\n  </ion-grid>\n<hr>\n  <ion-grid style="display:flex; align-items:center; justify-content: flex-start ; flex-direction:row;">\n    <img style="margin-right: 2%; width: 7%;" src="../assets/imgs/question.png">\n    <h6 >Trung tâm chăm sóc khách hàng</h6>\n  </ion-grid>\n\n\n\n  <ion-grid style="display:flex ;flex-direction:row; width: 60%;">\n    <button><img src="../assets/imgs/facebook.png"> </button>\n    <button><img src="../assets/imgs/phone.png"><a href="callto:18001090">18001090</a></button>\n\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/profile/profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/profile/profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Hồ sơ Cá Nhân</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <img class="image" style="width: 40%" src="../assets/imgs/signup.png">\n  <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>\n    <h2 style="text-align: center;"><b>{{ item.name }}</b></h2>\n  </button>\n\n  <ion-grid style="text-align: center; margin-top: 15px;">\n      <div>\n        <img class="avatar" style="width: 15%;" src="../assets/imgs/orderNumber.png">\n        <div>Đơn mua hàng: XRNW</div>\n      </div>\n      <div style="font-size: 40%;">\n        <button ion-button clear (click)="goOrderHistoriesPage()">Lịch sử giao hàng</button>\n      </div>\n  </ion-grid>\n\n  <ion-grid style="display:flex; justify-content: center; flex-direction: row; margin-bottom: 25px;">\n    <button style="border: 1px solid white;">\n      <img src="../assets/imgs/waitingforConfirm.png">\n      <div>Chờ xác nhận</div>\n    </button>\n    <button style="border: 1px solid white;">\n      <img src="../assets/imgs/waitingforPills.png">\n      <div>Chờ lấy thuốc</div>\n    </button>\n    <button style="border: 1px solid white;">\n      <img src="../assets/imgs/deliverPills.png">\n      <div>Đang giao thuốc</div>\n    </button>\n    <button style="border: 1px solid white;">\n      <img src="../assets/imgs/delivered.png">\n      <div>Hoàn tất</div>\n    </button>\n  </ion-grid>\n<hr>\n  <ion-grid style="display:flex; align-items:center; justify-content: flex-start ; flex-direction:row;">\n    <img style="margin-right: 2%; width: 7%;" src="../assets/imgs/question.png">\n    <h6 >Trung tâm chăm sóc khách hàng</h6>\n  </ion-grid>\n\n\n\n  <ion-grid style="display:flex ;flex-direction:row; width: 60%;">\n    <button style="border: 1px solid white;">\n      <img src="../assets/imgs/facebook.png">\n      <a href="#">Facebook</a>\n    </button>\n    <button style="border: 1px solid white;">\n      <img src="../assets/imgs/phone.png">\n      <a href="callto:18001090">18001090</a>\n    </button>\n\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/nguyenduyanh/Desktop/Freelance/mePill/src/pages/profile/profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"]])
     ], ProfilePage);
@@ -1380,5 +1452,5 @@ var ProfilePage = /** @class */ (function () {
 
 /***/ })
 
-},[332]);
+},[333]);
 //# sourceMappingURL=main.js.map

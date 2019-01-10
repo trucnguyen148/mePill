@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-
+import { AngularFireDatabase } from 'angularfire2/database';
 /**
  * Generated class for the HomePage page.
  *
@@ -51,8 +51,16 @@ export class HomePage {
       }
     ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public afd : AngularFireDatabase,
+    private alertCtrl: AlertController) {
+    this.getDataFromFireBase()
   }
+
+    getDataFromFireBase(){
+      
+    }
 
   presentConfirm() {
     let alert = this.alertCtrl.create({

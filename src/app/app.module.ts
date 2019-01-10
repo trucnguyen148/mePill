@@ -24,7 +24,17 @@ import { CalendarModule } from 'ionic3-calendar-en';
 import { SelectSearchableModule } from 'ionic-select-searchable';
 import { IonicPageModule } from 'ionic-angular';
 import { Camera } from '@ionic-native/camera';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
+var config = {
+    apiKey: "AIzaSyCAVfoQiB0y208od2TD4jn2cRy0KCbw0bU",
+    authDomain: "mepill-860c1.firebaseapp.com",
+    databaseURL: "https://mepill-860c1.firebaseio.com",
+    projectId: "mepill-860c1",
+    storageBucket: "mepill-860c1.appspot.com",
+    messagingSenderId: "266008860312"
+  };
 
 @NgModule({
   declarations: [
@@ -49,7 +59,10 @@ import { Camera } from '@ionic-native/camera';
     IonicModule.forRoot(MyApp),
     CalendarModule,
     IonicPageModule.forChild(AddItemPage),
-    SelectSearchableModule
+    SelectSearchableModule,
+    AngularFireDatabaseModule,
+    AngularFireModule,
+    AngularFireModule.initializeApp(config)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

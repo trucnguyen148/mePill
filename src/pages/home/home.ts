@@ -53,14 +53,11 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public afd : AngularFireDatabase,
     private alertCtrl: AlertController) {
-    this.getDataFromFireBase()
+
   }
 
-    getDataFromFireBase(){
-      
-    }
+
 
   presentConfirm() {
     let alert = this.alertCtrl.create({
